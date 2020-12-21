@@ -1,7 +1,6 @@
 @import "vars"
 
-
-/*==========  Desktop First  ==========*/
+/*==========	Desktop First	==========*/
 
 @media (max-width: 1370px)
 	.top-section
@@ -14,11 +13,12 @@
 				margin-bottom: 0
 
 //Extra large: ≥1200px
-+media-breakpoint-down(xl)
-	
+@media (max-width: 1284px)
+	.top-section
+
 
 //Large: ≥992px
-+media-breakpoint-down(lg)
+@media (max-width: 992px)
 	h3.type-h
 		font-size: 26px
 
@@ -65,7 +65,7 @@
 			background: none
 			img
 				margin: 25px 0
-	
+
 	.button-wrapper
 		padding: 0
 
@@ -127,32 +127,9 @@
 		padding: 30px 20px 30px 20px
 		input
 			padding-left: 15px
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //Medium: ≥768px
-+media-breakpoint-down(md)
+@media (max-width: 768px)
 	.button
 		height: 60px
 		&.button-header
@@ -274,52 +251,8 @@
 		padding: 90px 0 112px 0
 		text-align: left
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Small: ≥576px
-+media-breakpoint-down(sm)
+@media (max-width: 576px)
 	section
 		padding: 40px 0
 
@@ -579,53 +512,6 @@
 			p
 				margin: 15px 0 30px 0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	.advantage-item
 		text-align: center
 
@@ -746,27 +632,3 @@
 		p
 			line-height: 1.4
 			font-size: 16px
-
-	.d-xs-block
-		display: block !important
-
-//Extra small: >0
-+media-breakpoint-down(xs)
-
-
-/*==========  Mobile First  ==========*/
-
-//Extra small: <576px
-+media-breakpoint-up(xs)
-
-//Small: ≤576px
-+media-breakpoint-up(sm)
-
-//Medium: ≤768px
-+media-breakpoint-up(md)
-
-//Large: ≤992px
-+media-breakpoint-up(lg)
-
-//Extra large: ≤1200px
-+media-breakpoint-up(xl)

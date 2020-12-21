@@ -2,6 +2,8 @@
 @import "fonts"
 @import "libs"
 
+*
+	box-sizing: border-box
 
 ::placeholder
 	color: #000
@@ -12,6 +14,8 @@
 
 html, body
 	height: 100%
+	margin: 0
+	padding: 0
 
 body
 	font-size: 16px
@@ -31,20 +35,18 @@ body
 			&:required:valid
 				border-color: green
 
+.container
+	width: 1361px
+	margin: 0 auto
+	padding: 0 20px
+
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
 
 section
-	padding: 135px 0 105px 0
-
-.text-right
-	display: flex
-	justify-content: flex-end
-
-.text-center
-	text-align: center
+	padding: 80px 0 115px 0
 
 h3
 	font-size: 48px
@@ -54,7 +56,7 @@ h3
 	span
 		color: $accent
 
-h3.type-h
+h3.type-head
 	font-size: 48px
 	font-weight: 900
 	text-align: center
@@ -88,7 +90,7 @@ h3.type-h
 	background: $accent
 	padding: 3px
 	border-radius: 10em
-	transition: background .3s ease
+	transition: $time
 	&:after
 		content: ''
 		position: absolute
@@ -98,17 +100,34 @@ h3.type-h
 		height: 100%
 		background: $buttonbghover
 		border-radius: 10em
-		transition: opacity .3s ease
+		transition: $time
 		z-index: 2
 		opacity: 0
 	&.button-header
+		background: transparent
+		border: 1px solid $accent
 		height: auto
 		font-size: 14px
-		font-weight: 600
+		font-weight: 400
 		text-transform: none
 		height: 45px
 		margin-left: 42px
-		max-width: 225px
+		min-width: 210px
+		color: $accent
+		span
+			&::after
+				content: ''
+				position: absolute
+				bottom: 5px
+				left: 0
+				width: 100%
+				height: 1px
+				background: $accent
+				transition: $time
+		&:focus, &:hover
+			color: $accent
+			&:after
+				opacity: 0
 	&:focus, &:hover
 		text-decoration: none
 		color: #fff
@@ -124,71 +143,43 @@ h3.type-h
 		z-index: 3
 		position: relative
 
+
+
 .header
 	width: 100%
-	position: fixed
-	top: 0
-	background-color: #fff
+	position: absolute
+	top: 60px
+	background-color: transparent
+	padding: 10px 0
 	z-index: 110
-	overflow: hidden
-	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5)
-	.middle-xs
+	transition: $time
+	&.scrolled
+		position: fixed
+		top: 0
+		background-color: #1f1d1c
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5)
+		transition: $time
+	.container
 		display: flex
-		align-items: center
-		a.button
-			outline: none
-	.logo
-		margin: 20px 0 15px 0
+		justify-content: space-between
+	.right-side
+		display: flex
 	.mail-link
+		text-decoration: none
 		font-size: 16px
-		color: #000
+		color: #fff
 		display: flex
 		align-items: center
+		white-space: nowrap
+		transition: $time
 		img
-			margin-top: 3px
-			margin-right: 5px
-	.menu
-		.menu_list
-			list-style-type: none
-			margin: 0
-			padding-left: 0
-			display: flex
-			justify-content: flex-start
-			.menu_item
-				display: inline-block
-				margin-right: 80px
-				line-height: 52px
-				position: relative
-				a
-					font-size: 16px
-					font-weight: 400
-					height: 100%
-					display: block
-					text-decoration: none
-					outline: none
-					color: $fontcolor
-					text-align: center
-					transition: color .25s ease
-					position: relative
-					&:hover
-						color: $accent
-
-.phones
-	display: flex
-	align-items: center
-	.num-phones
-		display: flex
-		flex-direction: column
-		justify-content: center
-		a
-			font-weight: 900
-			color: $fontcolor
-			line-height: 1.2
+			margin-right: 15px
+		&:hover
+			color: $accent
 
 .top-section
-	// padding: 175px 0 125px 0
 	padding: 0
-	padding-top: 75px
+	padding-top: 175px
 	background: url('../img/top-bg.jpg') center no-repeat
 	background-size: cover
 	color: #fff
@@ -199,21 +190,25 @@ h3.type-h
 		img
 			margin: 0 auto
 	h1
-		margin-top: 0
-		margin-bottom: 50px
+		margin: 0 0 45px 0
 		line-height: 1.3
 		font-size: 53px
-		font-weight: 600
+		font-weight: 900
 		color: #fff
-		border-radius: 5px
-		// display: inline-block
-	h2
-		font-size: 26px
-		font-weight: 300
+		display: flex
+		flex-direction: column
+		span
+	p
+		font-size: 18px
+		font-weight: 400
 		line-height: 1.5
 		margin-bottom: 100px
 		span
-			font-weight: 600
+			font-weight: 800
+			color: $accent
+	.top-section-links
+		display: flex
+		justify-content: space-between
 	.publicaation
 		.links
 			display: grid
@@ -253,7 +248,6 @@ h3.type-h
 					font-size: 28px
 		span
 			display: block
-			font-family: MuseoSansCyrl-g
 			font-size: 40px
 			line-height: 1
 

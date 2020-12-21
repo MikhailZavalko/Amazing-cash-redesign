@@ -54,17 +54,6 @@ $(function() {
 	});
 	/* Magnific Popup */
 
-
-
-	/* CLOSE SUCCESS OPEN FORM */
-	$('.close-popup').on('click', function (e) {
-		e.preventDefault();
-		$(this).closest('.success').removeClass('visible');
-	})
-	/* CLOSE SUCCESS OPEN FORM */
-
-
-
 	/* E-mail Ajax Send */
 	$("form").submit(function(e) {
 		e.preventDefault;
@@ -77,38 +66,37 @@ $(function() {
 		}).done(function() {
 			$('.form').removeClass('loading');
 			$(".success").addClass("visible");
-			th.trigger("reset");
 			setTimeout(function() {
 				// Done Functions
+				th.trigger("reset");
 				$(".success").removeClass("visible");
 				$.magnificPopup.close();
-			}, 60000);
+			}, 3000);
 		});
 		return false;
 	});
 	/* E-mail Ajax Send */
 
-
-
 });
 
+/* SCROLL FOR HEADER */
+var windowHeight = $(window).height();
 
-/* scroll menu function */
-function scrollMenu(selector, id){
-	$(selector).scrollspy({
-		min: $(selector).position().top-50,
-		max: ($(selector).position().top + $(selector).height()),
-		onEnter: function(element, position) {
-			$(".menu__item_active").removeClass("menu__item_active");
-			$(".menu__item a[data-num="+id+"]").parent().addClass("menu__item_active");
-		}
-	});
-}
-jQuery(document).ready(function(){
-	$('a[href^="#"].anchor').bind("click", function(e){
-		var anchor = $(this);
-		$('html, body').stop().animate({scrollTop: ($(anchor.attr('href')).offset().top - 35)}, 1000);
-		e.preventDefault();
-	});return false;
+$(document).ready(function($) {
+	$(window).on('scroll touchmove', function () {
+		$('.header').toggleClass('scrolled', $(document).scrollTop() > windowHeight);
+	}).scroll();
 });
-/* scroll menu function */
+	/* SCROLL FOR HEADER */
+
+/* MENU TRIGGER FOR SCROLL */
+$(".header-link").click(function () {
+	elementClick = $(this).attr("href");
+	destination = $(elementClick).offset().top - 50;
+	destination = elementClick == '#home' ? destination - 20 : destination;
+	$("html,body").stop().animate({ scrollTop: destination }, 1000);
+	$(".hamburger").removeClass('is-active');
+	$('.menu').removeClass('active');
+	return false;
+});
+	/* MENU TRIGGER FOR SCROLL */
