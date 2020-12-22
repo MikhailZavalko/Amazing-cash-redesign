@@ -28,10 +28,10 @@ body
 	color: $fontcolor
 	background-color: #fefefe
 	input, textarea
-			border: #666 1px solid
-			outline: none
-			&:focus:required:invalid
-				border-color: red
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
 			&:required:valid
 				border-color: green
 
@@ -48,37 +48,32 @@ body
 section
 	padding: 80px 0 115px 0
 
-h3
-	font-size: 48px
-	font-weight: 900
-	line-height: 1.0
-	color: #313131
-	span
-		color: $accent
-
 h3.type-head
 	font-size: 48px
-	font-weight: 900
+	font-weight: 950
 	text-align: center
 	line-height: 1.2
 	margin-top: 0
-	margin-bottom: 70px
+	margin-bottom: 40px
 	color: #313131
+	span.stroke
+		color: transparent
+		-webkit-text-stroke: 1px $fontcolor
+	span.logo
+		color: transparent
+		-webkit-text-stroke: 1px #fff
 	span
 		color: $accent
-		text-transform: uppercase
 
 .button-wrapper
 	padding: 0 50px
 
 .button
-	display: inline-block
-	color: #fff
-	height: 74px
+	color: #161616
+	height: 69px
 	width: 100%
 	font-weight: 500
 	font-size: 18px
-	text-transform: uppercase
 	text-align: center
 	outline: none
 	position: relative
@@ -87,9 +82,11 @@ h3.type-head
 	align-items: center
 	justify-content: center
 	text-decoration: none
-	background: $accent
+	box-shadow: inset 0px 3px 0px 0px rgba(255, 255, 255, 0.18)
+	background: $buttonbg
 	padding: 3px
 	border-radius: 10em
+	border: 1px solid $accent
 	transition: $time
 	&:after
 		content: ''
@@ -130,7 +127,6 @@ h3.type-head
 				opacity: 0
 	&:focus, &:hover
 		text-decoration: none
-		color: #fff
 		outline: none
 		&:after
 			opacity: 1
@@ -142,8 +138,6 @@ h3.type-head
 	span
 		z-index: 3
 		position: relative
-
-
 
 .header
 	width: 100%
@@ -158,7 +152,6 @@ h3.type-head
 		top: 0
 		background-color: #1f1d1c
 		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5)
-		transition: $time
 	.container
 		display: flex
 		justify-content: space-between
@@ -193,7 +186,7 @@ h3.type-head
 		margin: 0 0 45px 0
 		line-height: 1.3
 		font-size: 53px
-		font-weight: 900
+		font-weight: 950
 		color: #fff
 		display: flex
 		flex-direction: column
@@ -209,6 +202,8 @@ h3.type-head
 	.top-section-links
 		display: flex
 		justify-content: space-between
+	.button
+		max-width: 290px
 	.publicaation
 		.links
 			display: grid
@@ -251,163 +246,164 @@ h3.type-head
 			font-size: 40px
 			line-height: 1
 
-
-	.intro-item
-		margin-top: 40px
-		margin-bottom: 70px
-		display: flex
-		justify-content: flex-start
-		align-items: center
-		.image
-			flex-shrink: 0
-			width: 36px
-			display: flex
-			justify-content: center
-		p
-			margin: 0 0 0 10px
-			font-size: 14px
-			font-weight: 300
-			line-height: 1.3
-
-
-
-.thank-you-page
-	h1
-		text-align: center
-	p
-		font-size: 20px
-		margin-bottom: 50px
-		text-align: center
-
-
-
 .info-items-section
-	background-color: #1F1D1C
-	color: #fff
-	padding: 60px 0 80px 0
-	.info-items-grid
-		display: grid
-		grid-template-columns: repeat(5, 1fr)
-		text-align: center
-		.item-img
-			img
-				margin: 0 auto 15px auto
-		p
-			line-height: 1.4
-			font-weight: 400
-			margin: 0
+	padding: 80px 0 120px 0
+.info-items-grid
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-row-gap: 75px
+	text-align: center
+	.item-img
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		min-height: 130px
+		margin-bottom: 7px
+	p
+		line-height: 1.1
+		font-weight: 400
+		margin: 0
+		span
+			font-weight: 800
+			font-style: italic
 
 .about-section
-	padding: 160px 0
+	padding: 90px 0
 	background: url('../img/about-bg.jpg') center no-repeat
 	background-size: cover
-	&-content
-		h3
-			margin-bottom: 25px
-			font-size: 48px
+	color: #ffffff
+	h3.type-head
+		text-align: left
+		color: #ffffff
+	.text
+		max-width: 760px
+	p
+		font-size: 17px
+		margin-bottom: 35px
+		line-height: 1.8
+		span
 			font-weight: 900
-		p
-			font-size: 18px
-			font-weight: 300
-			margin-bottom: 35px
-			line-height: 1.8
+			span
+				color: $accent
+
+
 
 .steps-section
-	background: url('../img/steps-bg.jpg') center no-repeat
 	background-size: cover
-	color: #fff
 	h3.type-h
-		color: #fff
 	.steps-grid
 		display: grid
 		grid-template-columns: repeat(5, 1fr)
-		grid-gap: 25px
-		margin-bottom: 70px
+		grid-gap: 60px
+		margin-bottom: 57px
 		.steps-item
-			padding: 17px 5px 20px 10px
-			border: 4px solid $accent
 			position: relative
-			&::before
-				content: ""
+			display: flex
+			flex-direction: column
+			&:nth-child(even)
+				flex-direction: column-reverse
+				.big-num
+					top: 30px
+				&:not(:last-child)
+					.num
+						&::after
+							right: -50px
+							top: -120px
+							width: 209px
+							height: 158px
+							background: url('../img/line-to-top.png') center no-repeat
+				p
+					margin-top: 15px
+			.big-num
 				position: absolute
-				right: -21px
-				top: 50%
-				margin-top: -9.5px
-				display: inline-block
-				width: 0
-				height: 0
-				border-style: solid
-				border-width: 9.5px 0 9.5px 17px
-				border-color: transparent transparent transparent $accent
-			&:last-child
-				&::before
-					display: none
-			.step-img
-				margin-left: 13px
-				margin-bottom: 15px
-				height: 63px
-				display: flex
-				align-items: flex-end
-				img
-					flex-shrink: 0
+				top: 0
+				left: 10px
+				line-height: 1
+				font-size: 266px
+				font-weight: 900
+				opacity: 0.11
+				z-index: 1
+			.num
+				position: relative
+				font-size: 72px
+				font-weight: 900
+				line-height: 1
+				background: $buttonbg
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+				color: $accent
+				display: table
+				z-index: 2
+				margin-top: 18px
+			&:not(:last-child)
+				.num
+					&::after
+						content: ''
+						position: absolute
+						right: -50px
+						top: 30px
+						width: 216px
+						height: 160px
+						background: url('../img/line-to-bottom.png') center no-repeat
 			p
-				line-height: 1.4
-				font-weight: 300
+				position: relative
+				line-height: 1.5
 				margin: 0
-
-.info-items-second-section
-	padding: 80px 0 90px 0
+				z-index: 2
+				span
+					font-weight: 800
+	.button
+		max-width: 470px
+		margin: 0 auto 65px auto
 	.info-items-grid
+		padding-top: 73px
+		border-top: 1px solid #d7d7d7
+		grid-template-columns: repeat(5, 1fr)
+		grid-column-gap: 84px
+
+
+
+.num-section
+	padding: 150px 0
+	background: url('../img/num-bg.jpg') center no-repeat
+	background-size: cover
+	color: #ffffff
+	h3.type-head
+		color: #ffffff
+		span.stroke
+			-webkit-text-stroke: 1px #ffffff
+	.num-grid
 		display: grid
 		grid-template-columns: repeat(3, 1fr)
-		.info-item
-			display: flex
-			align-items: center
-			padding: 0 30px
-			position: relative
-			&.borders
-				&::after, &::before
-					content: ''
-					height: 70px
-					width: 1px
-					background-color: #cecdcd
-					position: absolute
-					top: 50%
-					margin-top: -35px
-				&::after
-					right: 0
-				&::before
-					left: 0
-			.item-img
-				margin-right: 30px
-			p
-				margin: 0
-				font-weight: 300
+		margin: 0 auto
+	.num-item
+		display: inline-block
+		&:nth-child(1)
+			border-bottom: 1px solid rgba(255,255,255,.29)
+		&:nth-child(2)
+			border-bottom: 1px solid rgba(255,255,255,.29)
+			border-right: 1px solid rgba(255,255,255,.29)
+			border-left: 1px solid rgba(255,255,255,.29)
+		&:nth-child(3)
+			border-bottom: 1px solid rgba(255,255,255,.29)
+		&:nth-child(5)
+			border-right: 1px solid rgba(255,255,255,.29)
+			border-left: 1px solid rgba(255,255,255,.29)
+		&-number
+			line-height: 1
+			margin-bottom: 10px
+			font-weight: 500
+			font-size: 18px
+			span
+				font-size: 48px
+				font-weight: 900
+		p
+			font-size: 18px
+			font-weight: 300
+			line-height: 1
+			margin: 0
 
-.why-section
-	background: url('../img/why-bg.jpg') center no-repeat
-	background-size: cover
-	padding: 100px 0 70px 0
-.num-item
-	margin-bottom: 30px
-	display: inline-block
-	font-weight: 400
-	&-number
-		font-size: 36px
-		line-height: 1.2
-		font-weight: 900
-		display: flex
-		align-items: baseline
-		color: $accent
-		font-weight: 900
-		span
-			font-size: 60px
-	p
-		font-size: 16px
-		font-weight: 300
-		line-height: 1.5
-		margin: 0
-		color: #313131
+
 
 .why-best-section
 	background-color: #1f1d1c
@@ -703,25 +699,6 @@ h3.type-head
 			margin: 25px 0 45px 25px
 			font-weight: 300
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .item-info
 	display: flex
 	margin-top: 43px
@@ -739,7 +716,6 @@ h3.type-head
 			font-size: 14px
 			font-weight: 400
 			line-height: 1.2
-
 
 .advantage-item
 	display: inline-block
@@ -769,7 +745,6 @@ h3.type-head
 	display: flex
 	justify-content: center
 
-
 .type-section
 	.type-div
 		background-color: $accent
@@ -795,8 +770,6 @@ h3.type-head
 		.button
 			margin-top: 40px
 
-
-
 .publication-section
 	background-color: #1f1f1f
 	color: #ffffff
@@ -814,7 +787,6 @@ h3.type-head
 			color: $buttonbghover
 		&.philosopher
 			font-family: Philosopher-g,sans-serif
-
 
 .photo-section
 	h3.type-h
@@ -1071,8 +1043,6 @@ h3.type-head
 					font-weight: 600
 					font-size: 20px
 
-
-
 .popup-video
 	max-width: 640px
 	margin: auto
@@ -1204,14 +1174,12 @@ h3.type-head
 	&.visible
 		display: flex
 
-
 @-webkit-keyframes loading-spin
 	from
-		transform: rotateZ(0deg)
+	transform: rotateZ(0deg)
 
 	to
-		transform: rotateZ(360deg)
-
+	transform: rotateZ(360deg)
 
 @keyframes loading-spin
 	from
@@ -1222,7 +1190,13 @@ h3.type-head
 
 .spinner
 	position: relative
-	
 
+.thank-you-page
+	h1
+		text-align: center
+	p
+		font-size: 20px
+		margin-bottom: 50px
+		text-align: center
 
 @import "media" // Always at the end
