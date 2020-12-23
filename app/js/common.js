@@ -1,13 +1,17 @@
 $(function() {
 
-	/* Mask phone input */
+
+
+	/* SHOW/HIDDEN FAQ */
 	$('.faq-name').click(function() {
 		$(this).toggleClass('active')
 		.next()[$(this)
 		.next()
 		.is(':hidden') ? "slideDown" : "slideUp"](400);
 	});
-	/* Mask phone input */
+	/* SHOW/HIDDEN FAQ */
+
+
 
 	/* Owl-carousel */
 	$('.owl-carousel').owlCarousel({
@@ -21,15 +25,7 @@ $(function() {
 	});
 	/* Owl-carousel */
 
-	/* sameHeight */
-	$('.same1').sameHeight();
-	$('.same2').sameHeight();
-	$('.same3').sameHeight();
-	$('.same4').sameHeight();
-	$('.same5').sameHeight();
-	$('.same6').sameHeight();
-	$('.same7').sameHeight();
-	/* sameHeight */
+
 
 	/* Magnific Popup */
 	$('.open-form-button').magnificPopup({
@@ -53,6 +49,8 @@ $(function() {
 		}
 	});
 	/* Magnific Popup */
+
+
 
 	/* E-mail Ajax Send */
 	$("form").submit(function(e) {
@@ -79,6 +77,8 @@ $(function() {
 
 });
 
+
+
 /* SCROLL FOR HEADER */
 var windowHeight = $(window).height();
 
@@ -88,6 +88,8 @@ $(document).ready(function($) {
 	}).scroll();
 });
 	/* SCROLL FOR HEADER */
+
+
 
 /* MENU TRIGGER FOR SCROLL */
 $(".header-link").click(function () {
