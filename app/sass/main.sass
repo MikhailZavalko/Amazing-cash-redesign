@@ -128,6 +128,8 @@ h3.type-head
 			color: $accent
 			&:after
 				opacity: 0
+		&:active
+			background: transparent
 	&:focus, &:hover
 		text-decoration: none
 		outline: none
@@ -191,9 +193,23 @@ h3.type-head
 		font-size: 53px
 		font-weight: 950
 		color: #fff
-		display: flex
-		flex-direction: column
-		span
+		.head-bg
+			display: inline-block
+			position: relative
+			padding-right: 10px
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: -17px
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%)
+				background: url('../img/headers-bg.png') center no-repeat
+				width: calc(100% + 17px) 
+				height: 100%
+				z-index: 1
+			span
+				z-index: 2
+				position: relative
 	p
 		font-size: 18px
 		font-weight: 400
