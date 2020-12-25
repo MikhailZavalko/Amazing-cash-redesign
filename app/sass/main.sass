@@ -534,6 +534,10 @@ h3.type-head
 	text-align: center
 	h3.type-head
 		color: #ffffff
+		margin-bottom: 10px
+	p
+		font-size: 18px
+		margin: 0 0 50px
 	.info-block
 		top: -440px
 	h4
@@ -545,12 +549,9 @@ h3.type-head
 		.owl-nav
 			> div
 				position: absolute
-				top: 50%
-				margin-top: -30px
-				border-radius: 10em
-				border: 2px solid $fontcolor
-				width: 40px
-				height: 40px
+				bottom: 0
+				width: 50px
+				height: 392px
 				display: flex
 				justify-content: center
 				align-items: center
@@ -560,41 +561,45 @@ h3.type-head
 				padding-bottom: 1px
 				&.owl-prev
 					left: -60px
-					padding-right: 3px
+					background: url('../img/ararrow-left.pngr') center no-repeat
 				&.owl-next
 					right: -60px
-					padding-left: 3px
+					background: url('../img/ararrow-right.pngr') center no-repeat
 				&:hover
-					background-color: $accent
+					background-color: rgba($accent, .5)
 	.slide-item
-		height: 920px
+		height: 415px
 		display: flex
 		flex-direction: column
+		padding-top: 23px
+		position: relative
 		h5
+			padding: 19px 0
+			width: 250px
 			text-align: center
-			font-size: 30px
-			font-weight: 600
+			font-size: 18px
+			font-weight: 700
+			color: $fontcolor
+			background: #fff
+			border-radius: 10em
 			line-height: 1
-			position: relative
-			margin-top: 50px
-			margin-bottom: 55px
-			&::before
-				content: ''
-				position: absolute
-				width: 127px
-				height: 3px
-				background-color: $accent
-				bottom: -16px
-				left: 50%
-				margin-left: -63px
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			margin: 0
 		.res-imgs
 			display: grid
 			grid-template-columns: repeat(3, 1fr)
 			grid-gap: 30px
-			margin: 0 10px 32px 10px
+			height: 100%
+			padding: 0 50px
+			background: #ffffff
+			border-radius: 10px
 			img
+				z-index: 2
+				position: relative
 				align-self: center
-				box-shadow: 0px 0px 20px 0px rgba(3,3,3,0.2)
 	.owl-dots
 		position: absolute
 		bottom: 0
@@ -602,40 +607,41 @@ h3.type-head
 		transform: translateX(-50%)
 		margin-bottom: -55px
 		.owl-dot
-			width: 20px
-			height: 20px
+			width: 7px
+			height: 7px
 			background-color: #a4a4a4
-			margin-right: 11px
 			border-radius: 10em
 			display: inline-block
-			&:last-child
-				margin-right: 0
+			&:not(:last-child)
+				margin-right: 24px
 			&.active, &:hover
 				background-color: $accent
 
 
 
 .variants-section
-	background-color: $fontcolor
-	color: #fff
-	padding: 120px 0
-	h3.type-h
-		color: #fff
+	padding: 60px 0 105px 0
+	.variants-block
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 46px
 	.variant
-		transition: box-shadow $time
-		box-shadow: 0px 0px 8px 5px rgba(0,0,0,.3)
-		&.orange-bg
+		box-shadow: 0px 0px 21px 0px rgba(27, 28, 31, 0.18)
+		border-radius: 5px
+		overflow: hidden
+		&.brand
 			.name
-				.overlay
-					background: url("../img/var-orange-bg.jpg") center no-repeat
-					background-size: cover
+				background: $accent
+			ul
+				li
+					&::before
+						background: url(../img/confirmed-yellow.png) center no-repeat
 		.name
-			background: url("../img/var-bg.jpg") center no-repeat
-			background-size: cover
+			background: $fontcolor
 			position: relative
-			color: #1f1d1c
+			color: #fff
 			text-align: center
-			height: 58px
+			height: 55px
 			h4
 				font-size: 24px
 				font-weight: 900
@@ -643,178 +649,222 @@ h3.type-head
 				position: absolute
 				width: 100%
 				height: 100%
+				text-align: left
 				display: flex
 				align-items: center
-				justify-content: center
-			.overlay
-				position: absolute
-				background-color: transparent
-				transition: background-color $time
-				opacity: .7
-				position: absolute
-				top: 0
-				left: 0
-				width: 100%
-				height: 100%
-				z-index: 0
+				padding-left: 44px
 		ul
 			margin: 0
 			padding: 0
 			li
-				background-color: #2c2a29
 				list-style-type: none
-				line-height: 1.2
-				padding: 12px 12px 12px 34px
+				line-height: 1.4
+				padding: 13px 12px 13px 44px
 				position: relative
-				&:nth-child(2n+1)
-					background-color: #1f1d1c
-				&::after, &::before
+				span
+					font-weight: 800
+					font-size: 18px
+				&:not(:last-child)
+					border-bottom: 1px solid #d8d8d8
+				&::before
 					content: ''
 					position: absolute
-					background-color: $accent
-				&::after
-					width: 8px
-					height: 2px
-					left: 14px
-					top: 22px
-				&::before
-					width: 2px
-					height: 8px
-					left: 17px
-					top: 19px
-				&.negative
-					color: #6b6b6b
-					&::after
-						background-color: #5c5c5c
+					width: 9px
+					height: 9px
+					left: 25px
+					top: 17px
+					background: url('../img/confirmed-black.png') center no-repeat
+					background-size: cover
+				&.no-icon
 					&::before
 						display: none
-				&.no-icon
-					padding-left: 23px
-					&::after, &::before
-						display: none
+				&.strong
+					font-weight: 700
 				&.top-border
 					border-top: 1px solid $accent
-				&.with-button
-					padding: 25px 22px
-					.button
-						height: 65px
-						text-transform: none
-						color: $fontcolor
+		.with-button
+			padding: 27px 44px 45px 44px 
+			.button
+				// height: 65px
+				max-width: 433px
+				color: $fontcolor
+
+
 
 .black-section
 	background: url("../img/black-bg-1.jpg") center no-repeat
 	background-size: cover
 	text-align: center
-	padding: 100px 0 150px 0
+	padding: 140px 0 130px 0
 	color: #fff
 	p
-		margin-top: 40px
+		margin: 30px auto 0 auto
 		font-size: 30px
-		margin-bottom: 0
-		line-height: 1.5
+		line-height: 1.1
 		font-weight: 300
+		max-width: 725px
 		strong
 			font-weight: 600
 
+
+
 .our-result-section
-	background: url("../img/our-res-bg.jpg") center no-repeat
+	background: #161616
+	color: #ffffff
+	h3.type-head
+		color: #ffffff
+	.button
+		max-width: 435px
+		margin: 50px auto 0 auto
+.result-block
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	padding: 55px 0
+	&:not(:last-child)
+		border-bottom: 1px solid rgba(255, 144, 0, 0.2)
+	&:nth-child(odd)
+		flex-direction: row-reverse
+		.result-text
+			margin-left: 0
+			margin-right: 83px
+.video-link
+	height: 343px
+	width: 590px
+	flex-shrink: 0
+	display: block
 	background-size: cover
-	.video-link
-		height: 393px
+	position: relative
+	border-radius: 10px
+	.play-button
+		position: absolute
 		width: 100%
-		margin-bottom: 90px
-		display: block
-		background: url("../img/video-thumb.jpg") center no-repeat
-		background-size: cover
-		position: relative
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		align-items: flex-start
+		.logo
+			margin-left: 52px
+		.play
+			transition: transform $time
+			align-self: center
+		.play-descr
+			font-size: 18px
+			color: #fff
+			background: rgba(#161616,.8)
+			padding: 7px 20px
+			margin-left: 55px
+			display: inline-table
+	&:hover
 		.play-button
-			position: absolute
-			width: 100%
-			height: 100%
+			.play
+				transform: scale(1.3)
+.result-text
+	font-size: 30px
+	margin-left: 90px
+	span
+		font-size: 18px
+		line-height: 1.1
+		margin-bottom: 25px
+		display: block
+	.name
+		font-size: 18px
+		font-weight: 700
+		margin-bottom: 0
+	p
+		font-size: 16px
+		line-height: 1.3
+		margin-bottom: 30px
+		margin-top: 0
+	.description
+		font-weight: 800
+		margin-bottom: 0
+	
+
+
+
+.shop-results-section
+	.results-block
+		display: grid
+		grid-template-columns: auto auto auto
+		justify-content: space-around
+		.column
 			display: flex
 			flex-direction: column
-			justify-content: space-around
-			img
-				align-self: center
-			.play
-				transition: transform $time
-			.play-descr
-				font-size: 24px
-				font-weight: 500
-				color: #fff
-				background-color: #5c5c5c
-				width: 335px
-				line-height: 60px
-				padding-left: 17px
-				margin-left: 55px
-				display: flex
-				justify-content: center
-				align-items: center
-				display: inline-block
-		&:hover
-			.play-button
-				.play
-					transform: scale(1.3)
-	.result-text
-		padding-left: 50px
-		font-weight: 100
-		font-size: 30px
-		h4
-			font-size: 30px
-			font-weight: 900
-			line-height: 1.3
-			margin-top: 15px
-			margin-bottom: 30px
-		p
-			line-height: 1.3
-			margin-bottom: 30px
-			margin-top: 0
-		a
-			font-size: 24px
-			font-weight: 500
-			display: flex
-			align-items: center
-			img
-				margin-right: 15px
-			&:hover
-				text-decoration: none
+			justify-content: space-between
+
+
+
+.want-know-section
+	background: url('../img/want-know-bg.jpg') center no-repeat
+	background-size: cover
+	color: #ffffff
+	h3.type-head
+		color: #ffffff
+	.result-block
+		flex-direction: row
+		.result-text
+			margin-right: 0
+			margin-left: 105px
+			h3.type-head
+				line-height: 0.9
+				text-align: left
+				margin-bottom: 30px
+			p
+				line-height: 1.5
+				margin-bottom: 45px
+			.button
+				max-width: 430px
+				span
+					margin-bottom: 0
+
+
 
 .faq-section
 	padding-bottom: 45px
 	h3.type-h
 		margin-bottom: 50px
+	.faq-block
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 110px
 	.faq
 		.faq-name
 			padding: 20px 20px 20px 55px
-			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3)
+			box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.11)
 			margin-bottom: 45px
 			cursor: pointer
 			position: relative
+			transition: $time
 			.icon
 				position: absolute
 				top: 20px
 				left: 20px
-				width: 20px
-				height: 20px
-				background-color: $accent
+				width: 15px
+				height: 15px
+				background-color: $fontcolor
+				transition: $time
 				&::after, &::before
 					content: ''
 					position: absolute
 					background-color: #fff
 					top: 50%
 					left: 50%
+					transform: translate(-50%, -50%)
 				&::after
-					width: 6px
-					height: 2px
-					margin-top: -1px
-					margin-left: -3px
+					width: 10px
+					height: 4px
 			&.active
+				color: $accent
+				text-decoration: underline
 				.icon
+					background-color: $accent
 					&::before
-						width: 2px
-						height: 6px
-						margin-top: -3px
-						margin-left: -1px
+						width: 4px
+						height: 10px
+			&:hover
+				color: $accent
 			h4
 				font-size: 18px
 				font-weight: 900
@@ -824,6 +874,9 @@ h3.type-head
 			display: none
 			margin: 25px 0 45px 25px
 			font-weight: 300
+			font-size: 14px
+			span
+				font-weight: 700
 
 .item-info
 	display: flex
@@ -906,6 +959,11 @@ h3.type-head
 	background-size: cover
 	color: #fff
 	position: relative
+	&.second
+		background: url("../img/callback-bg-2.jpg") center no-repeat
+		background-size: cover
+		.container
+			padding: 42px 0 0 0
 	.container
 		padding: 260px 0 0 0
 	.text-form
@@ -930,6 +988,8 @@ h3.type-head
 		line-height: 1.2
 	.callback-form
 		margin-left: 45px
+
+
 
 .info-block
 	position: absolute
@@ -956,6 +1016,8 @@ h3.type-head
 		z-index: 2
 		span
 			font-weight: 700
+
+
 
 .form
 	padding: 60px 60px 78px 60px
@@ -1057,42 +1119,67 @@ h3.type-head
 		margin-right: 12px
 		flex-shrink: 0
 
-.main-footer
-	padding: 26px 0 15px
-	background-color: $fontcolor
-	color: #fff
-	.footer-button
-		font-size: 16px
+
+
+.footer
+	padding: 30px 0 15px
+	color: $fontcolor
+	.menu-time
+		display: flex
+		justify-content: space-between
+		border-bottom: 1px solid $fontcolor
+		padding-bottom: 25px
+		.footer-menu, .time
+			display: flex
+			align-items: center
+		.footer-menu
+			font-size: 16px
+			font-weight: 700
+			span
+				margin-right: 57px
+			.menu
+				a
+					color: $fontcolor
+					&:not(:last-child)
+						margin-right: 55px
+					&:hover
+						text-decoration: none
+		.time
+			span
+				font-size: 14px
+				font-weight: 300
+				margin-left: 10px
+	.main-footer
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 15px
+		font-size: 14px
 		font-weight: 300
-		color: #fff
-		outline: none
-		opacity: .3
+		p
+			line-height: 1.3
+			margin: 0
+	.footer-button
+		color: $fontcolor
 		text-decoration: underline
 		text-align: center
 		display: block
+		line-height: 1.3
 		&:hover
 			text-decoration: none
-	.mail-link
-		color: #fff
-		font-weight: 300
-		margin-left: 44px
-		img
-			margin-right: 9px
 	.contacts
-		.contact-item
-			text-align: right
-			a
-				color: $fontcolor
-				transition: color .25s ease
-				font-size: 16px
-				font-weight: 400
-				&:hover
-					text-decoration: none
-					color: $accent
-			&.contact-item-phone
-				a
-					font-weight: 600
-					font-size: 20px
+		display: flex
+		align-items: center
+		a
+			color: $fontcolor
+			display: flex
+			align-items: center
+			justify-content: center
+			text-decoration: none
+			&:not(:last-child)
+				margin-right: 17px
+
+				
 
 .popup-video
 	max-width: 640px
@@ -1224,6 +1311,9 @@ h3.type-head
 				display: block
 	&.visible
 		display: flex
+
+.d-none
+	display: none
 
 @-webkit-keyframes loading-spin
 	from
