@@ -16,6 +16,7 @@ html, body
 	height: 100%
 	margin: 0
 	padding: 0
+	overflow-x: hidden
 
 body
 	font-size: 16px
@@ -66,6 +67,23 @@ h3.type-head
 		-webkit-text-stroke: 1px #fff
 	span
 		color: $accent
+	span.clip-bg
+		color: #fff
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: -17px
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 15px 100%)
+			background: url('../img/headers-bg.png') center no-repeat
+			width: calc(100% + 20px) 
+			height: 100%
+			z-index: 1
+		span
+			z-index: 2
+			position: relative
+			color: #fff
 
 .button-wrapper
 	padding: 0 50px
@@ -183,6 +201,14 @@ h3.type-head
 	color: #fff
 	min-height: 100vh //new
 	display: flex
+	.container
+		display: flex
+		justify-content: center
+		flex-direction: column
+	.header
+		.container
+			flex-direction: row
+			justify-content: space-between
 	.logo-sm
 		margin-top: 30px
 		img
@@ -224,13 +250,17 @@ h3.type-head
 	.button
 		max-width: 290px
 	.publicaation
+		width: 500px
 		.links
-			display: grid
-			grid-template-columns: repeat(3, 1fr)
-			grid-gap: 10px
+			display: flex
+			flex-direction: column
+			.line
+				display: flex
+				justify-content: space-between
+				&:not(:last-child)
+					margin-bottom: 15px
 		p
-			font-size: 16px
-			font-weight: 300
+			font-size: 14px
 			margin: 0 0 15px
 		a
 			color: #fff
