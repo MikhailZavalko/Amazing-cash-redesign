@@ -16,7 +16,6 @@ html, body
 	height: 100%
 	margin: 0
 	padding: 0
-	overflow-x: hidden
 
 body
 	font-size: 16px
@@ -50,6 +49,32 @@ body
 
 section
 	padding: 80px 0 115px 0
+	position: relative
+	.right-box-sm, .left-box-sm
+		position: absolute
+		width: 141px
+		height: 256px
+		background: url('../img/small-box.png') center no-repeat
+	.right-box-sm
+		right: 0
+	.left-box-sm
+		left: 0
+		transform: scale(-1, 1)
+	.left-box-big, .right-box-big
+		position: absolute
+		width: 232px
+		height: 402px
+		background: url('../img/big-box.png') center no-repeat
+	.left-box-big
+		left: 0
+	.right-box-big
+		right: 0
+		transform: scale(-1, 1)
+	.right-logo-sm, .left-logo-sm
+		position: absolute
+		width: 171px
+		height: 171px
+		background: url('../img/blur-logo-sm.png') center no-repeat
 
 h3.type-head
 	font-size: 48px
@@ -65,6 +90,17 @@ h3.type-head
 	span.logo
 		color: transparent
 		-webkit-text-stroke: 1px #fff
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			bottom: -15px
+			left: 50%
+			transform: translateX(-50%)
+			width: 84px
+			height: 20px
+			background: url('../img/logo-arrow.png') center no-repeat
+			background-size: cover
 	span
 		color: $accent
 	span.clip-bg
@@ -195,18 +231,21 @@ h3.type-head
 
 .top-section
 	padding: 0
-	padding-top: 175px
 	background: url('../img/top-bg.jpg') center no-repeat
 	background-size: cover
 	color: #fff
 	min-height: 100vh //new
 	display: flex
+	.top-logo-sm
+		display: none
 	.container
+		margin-top: 175px
 		display: flex
 		justify-content: center
 		flex-direction: column
 	.header
 		.container
+			margin: 0 auto
 			flex-direction: row
 			justify-content: space-between
 	.logo-sm
@@ -295,6 +334,8 @@ h3.type-head
 			font-size: 40px
 			line-height: 1
 
+
+
 .info-items-section
 	padding: 80px 0 120px 0
 .info-items-grid
@@ -316,11 +357,15 @@ h3.type-head
 			font-weight: 800
 			font-style: italic
 
+
+
 .about-section
 	padding: 90px 0
 	background: url('../img/about-bg.jpg') center no-repeat
 	background-size: cover
 	color: #ffffff
+	.left-box-big
+		top: -90px
 	h3.type-head
 		text-align: left
 		color: #ffffff
@@ -339,6 +384,10 @@ h3.type-head
 
 .steps-section
 	background-size: cover
+	.right-box-sm
+		top: 210px
+	.left-box-sm
+		bottom: 0
 	h3.type-h
 	.steps-grid
 		display: grid
@@ -476,6 +525,10 @@ h3.type-head
 
 .why-best-section
 	padding: 75px 0 270px
+	.right-box-big
+		top: 722px
+	.left-box-sm
+		top: 100px
 	.best-item
 		h4
 			color: $accent
@@ -490,6 +543,7 @@ h3.type-head
 			grid-gap: 130px
 			.left-side, .right-side
 				position: relative
+				z-index: 2
 				&::after
 					content: ''
 					position: absolute
@@ -505,6 +559,15 @@ h3.type-head
 					line-height: 1.4
 					span
 						font-weight: 700
+				.badge
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					font-size: 700px
+					font-weight: 700
+					line-height: 0.95
+					z-index: 1
+					opacity: 0.05
 			.right-side
 				&::after
 					background-color: #289d11
@@ -521,6 +584,10 @@ h3.type-head
 
 .founders-section
 	padding-bottom: 230px
+	.right-box-sm
+		top: 263px
+	.left-box-big
+		top: 710px
 	.founder
 		display: flex
 		justify-content: space-between
@@ -667,6 +734,10 @@ h3.type-head
 
 .variants-section
 	padding: 60px 0 105px 0
+	.right-box-sm
+		top: 930px
+	.left-box-sm
+		bottom: 0
 	.variants-block
 		display: grid
 		grid-template-columns: repeat(2, 1fr)
@@ -680,6 +751,7 @@ h3.type-head
 				background: $accent
 			ul
 				li
+					background: #ffffff
 					&::before
 						background: url(../img/confirmed-yellow.png) center no-repeat
 		.name
@@ -729,9 +801,9 @@ h3.type-head
 				&.top-border
 					border-top: 1px solid $accent
 		.with-button
-			padding: 27px 44px 45px 44px 
+			padding: 27px 44px 45px 44px
+			background: #fff
 			.button
-				// height: 65px
 				max-width: 433px
 				color: $fontcolor
 
@@ -831,6 +903,23 @@ h3.type-head
 
 
 .shop-results-section
+	.right-logo-sm
+		right: 50px
+		top: 320px
+	.left-logo-sm
+		left: 30px
+		top: 700px
+	.right-logo-big, .left-logo-big
+		position: absolute
+		width: 392px
+		height: 183px
+		background: url('../img/blur-logo-big.png')
+	.right-logo-big
+		right: -155px
+		top: 790px
+	.left-logo-big
+		top: 184px
+		left: -110px
 	.results-block
 		display: grid
 		grid-template-columns: auto auto auto
@@ -869,6 +958,13 @@ h3.type-head
 
 .faq-section
 	padding-bottom: 45px
+	.right-box-sm
+		top: 900px
+		z-index: 
+	.left-box-sm
+		top: 350px
+		&.second
+			top: 1500px
 	h3.type-h
 		margin-bottom: 50px
 	.faq-block
@@ -877,6 +973,7 @@ h3.type-head
 		grid-gap: 110px
 	.faq
 		.faq-name
+			background: #ffffff
 			padding: 20px 20px 20px 55px
 			box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.11)
 			margin-bottom: 45px
@@ -1060,6 +1157,7 @@ h3.type-head
 		position: relative
 		line-height: 1.2
 		z-index: 2
+		margin: 0
 		span
 			font-weight: 700
 
@@ -1093,19 +1191,22 @@ h3.type-head
 		width: 100%
 		height: 75px
 		margin-top: 8px
+		span
+			font-size: 18px
+			margin: 0
 		&:hover
 			cursor: pointer
 	.success
 		font-weight: 900
-		background-color: #fff
 		font-size: 36px
+		padding: 40px
 		span
 			color: $accent
 			margin-bottom: 0
 			line-height: 1
 			text-transform: uppercase
 			span
-				color: $fontcolor
+				color: #fff
 				font-size: 15px
 				font-weight: 400
 				margin-top: 25px
@@ -1132,7 +1233,7 @@ h3.type-head
 		animation: loading-spin .7s infinite linear
 	&::after
 		content: ''
-		background-color: rgba(255,255,255,.8)
+		background-color: #1f1e1eee
 		position: absolute
 		top: 0
 		left: 0
@@ -1161,6 +1262,11 @@ h3.type-head
 		line-height: 1.2
 		color: rgba(#fff,.5)
 		margin: 0
+	a
+		color: rgba(#fff,.5)
+		text-decoration: underline
+		&:hover
+			text-decoration: none
 	.checkbox
 		margin-right: 12px
 		flex-shrink: 0
@@ -1225,7 +1331,7 @@ h3.type-head
 			&:not(:last-child)
 				margin-right: 17px
 
-				
+
 
 .popup-video
 	max-width: 640px
@@ -1233,55 +1339,18 @@ h3.type-head
 
 .popup-form
 	max-width: 560px
-	padding: 50px 40px 47px 40px
-	display: flex
-	flex-direction: column
-	align-items: center
-	background-color: #fff
+	background-color: rgba(#181818,.9)
+	color: #ffffff
 	span
 		font-size: 30px
-		font-weight: 900
+		font-weight: 800
 		text-align: center
 		display: block
 		margin-bottom: 15px
 		line-height: 1.4
 		span
 			font-size: 18px
-			line-height: 1.4
 			font-weight: 400
-	.input
-		width: 365px
-		margin-bottom: 15px
-		height: 60px
-		padding-left: 34px
-		padding-right: 10px
-		font-size: 14px
-		text-transform: uppercase
-		color: $fontcolor
-		&::placeholder
-			color: #000
-		&:focus
-			&::placeholder
-				color: transparent
-	.button
-		border: none
-		max-width: 365px
-		display: flex
-		align-items: center
-		justify-content: center
-		margin: 12px auto 0 auto
-		height: 80px
-		span
-			font-size: 18px
-			font-weight: 400
-			margin: 0
-			color: $fontcolor
-			text-transform: none
-	.checkbox-personal
-		.checkbox
-			// height: 20px
-			// width: 13px
-			margin-right: 7px
 
 .mfp-close-btn-in .mfp-close
 	color: #000
@@ -1323,7 +1392,7 @@ h3.type-head
 	text-align: center
 	z-index: 2
 	font-weight: 300
-	background-color: #fff
+	background-color: #181818
 	align-items: center
 	justify-content: center
 	font-size: 30px

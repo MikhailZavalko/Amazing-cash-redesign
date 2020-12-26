@@ -5,8 +5,13 @@
 @media (max-width: 1370px)
 	.container
 		width: 1200px
+
+	.header
+		top: 30px
+
 	.top-section
-		padding-top: 100px
+		.container
+			margin-top: 110px
 		h1
 			font-size: 48px
 		h2
@@ -15,13 +20,34 @@
 			a
 				margin-bottom: 0
 
+	.about-section
+		p
+			font-size: 15px
+
+	.steps-section
+		.steps-grid
+			.steps-item
+				p
+					line-height: 1.1
+
+	.photo-section
+		.info-block
+			top: -390px
+			br
+				display: none
+
 //Extra large: ≥1200px
-@media (max-width: 1284px)
-	.top-section
+@media (max-width: 1200px)
+	.container
+		width: 992px
 
 
 //Large: ≥992px
 @media (max-width: 992px)
+	.container
+		width: 768px
+
+
 	h3.type-h
 		font-size: 26px
 
@@ -30,71 +56,12 @@
 		&.button-header
 			font-size: 16px
 
-	.header
-		.logo
-			img
-				top: -23px
-		.menu
-			.menu_list
-				.menu_item
-					margin-right: 30px
-					a
-						font-size: 14px
-					&::after
-						right: -15px
-
 	.top-section
-		padding: 36px 0 100px 0
 		h1
 			margin-top: 60px
 			margin-bottom: 40px
 			line-height: 50px
 			font-size: 36px
-
-	.about-section
-		padding: 50px 0 0 0
-		.name
-			.m-name
-				font-size: 18px
-			.logo
-				display: none
-		&-content
-			margin-bottom: 50px
-			h3
-				font-size: 24px
-			p
-				font-size: 16px
-		&.history
-			background: none
-			img
-				margin: 25px 0
-
-	.button-wrapper
-		padding: 0
-
-	.advantage-item
-		margin-bottom: 37px
-		.adv-img
-			height: 65px
-		h4
-			font-size: 16px
-			margin-top: 15px
-		p
-			font-size: 14px
-		a.button
-			font-size: 16px
-			font-weight: 400
-			height: 37px
-		&.wide
-			width: 330px
-
-	.type-section
-		.type-div
-			font-size: 18px
-
-	.publication-section
-		a
-			margin-bottom: 25px
 
 	.black-section
 		p
@@ -131,8 +98,16 @@
 		input
 			padding-left: 15px
 
+
+
+
+
+
 //Medium: ≥768px
 @media (max-width: 768px)
+	.container
+		width: 576px
+
 	.button
 		height: 60px
 		&.button-header
@@ -150,9 +125,6 @@
 						right: -8px
 
 	.top-section
-		padding-bottom: 40px
-		padding-top: 50px
-		margin-top: 69px
 		.contacts
 			.contact-item
 				&-email
@@ -254,8 +226,15 @@
 		padding: 90px 0 112px 0
 		text-align: left
 
+
+
+
+
 //Small: ≥576px
 @media (max-width: 576px)
+	.container
+		width: 100%
+
 	section
 		padding: 40px 0
 
@@ -269,12 +248,12 @@
 			&::after
 				display: none
 
-	.button-wrapper
-		padding: 0
-
-	h3.type-h
+	h3.type-head
 		font-size: 22px
 		margin-bottom: 30px
+
+	.header
+		display: none
 
 	.photo-section
 		padding: 40px 0
@@ -285,80 +264,100 @@
 			.slide-text, .slide-img
 				width: 100%
 
-	.header
-		display: none
-
 	.top-section
-		// padding: 0 0 50px 0
 		min-height: auto
-		padding-top: 20px
 		margin: 0
 		background-position: left
-		h1, h2
+		padding-bottom: 50px
+		.top-logo-sm
+			display: block
+		.container
+			margin-top: 20px
+		h1
 			font-size: 24px
-			line-height: 1.2
+			line-height: 1
 			padding: 0
-			margin-bottom: 25px
+			margin: 30px 0
 			text-align: left
 			display: block
+			font-weight: 800
 			span
-				display: block
-				margin: 5px 0
-		h2
-			font-size: 20px
-			span
-				display: inline-block
-				margin: 0
+				margin: 2px 0
+		p
+			margin-bottom: 50px
+		.top-section-links
+			flex-direction: column
+		.button
+			margin: 0 auto
 		.publicaation
-			margin-top: 20px
+			margin-top: 50px
+			width: auto
 			.links
-				grid-template-columns: auto
-			p
-				text-align: center
-			span
-				text-align: center
-				display: block
+				.line
+					display: grid
+					grid-template-columns: repeat(2, 1fr)
+					grid-gap: 15px
+
+
 
 	.thank-you-page
 		min-height: 100vh
 		h1
 			text-align: center
 
+
+
 	.info-items-section
 		padding: 40px 0 50px 0
+		.right-box-sm
+			display: none
 		.info-items-grid
-			grid-template-columns: repeat(1, 1fr)
+			grid-template-columns: auto
+			grid-row-gap: 0
 			.info-item
 				display: flex
+				justify-content: space-between
 				margin-bottom: 25px
 				padding: 0 15px
 			.item-img
-				min-width: 51px
-				margin-right: 30px
-				img
-					margin-bottom: 7px
+				max-width: 150px
+				margin: 0
+				align-items: center
+			.text
+				display: flex
+				align-items: center
 			p
 				text-align: left
+				display: block
+				margin-left: 25px
+
+
 
 	.about-section
-		padding: 40px 0
-		background: none
-		.about-section-content
-			margin: 0
-		img
-			margin: 0 auto 20px auto
-		h3
-			font-size: 22px
-			text-align: center
+		padding: 50px 0
+		background-position: 0 center
+		.left-box-big
+			display: none
 		p
 			font-size: 16px
 			line-height: 1.4
+			margin-bottom: 25px
+
+
 
 	.steps-section
 		.steps-grid
-			grid-template-columns: repeat(1, 1fr)
+			grid-template-columns: auto
 			margin-bottom: 25px
+			grid-gap: 30px
 			.steps-item
+				&:nth-child(even)
+					flex-direction: column
+				&:not(:last-child)
+					.num::after
+						display: none
+				.big-num
+					font-size: 188px
 				.step-img
 					justify-content: center
 					margin-left: 0
@@ -369,6 +368,117 @@
 					margin-right: -5px
 					border-width: 17px 10px 0 10px
 					border-color: $accent transparent transparent transparent
+		.button
+			margin-bottom: 40px
+		.info-items-grid
+			padding-top: 40px
+			grid-template-columns: auto
+			grid-row-gap: 30px
+
+
+	.num-section
+		padding: 40px 0
+		.num-grid
+			grid-template-columns: auto
+			.num-item
+				border: none
+				padding: 0
+
+
+
+	.why-best-section
+		padding: 40px 0 100px 0
+		.best-item
+			.item-text
+				grid-template-columns: auto
+				grid-gap: 40px
+				margin-bottom: 40px
+				.left-side, .right-side
+					.badge
+						display: none
+
+
+
+	.info-block
+		position: relative
+		top: 0
+		left: 0
+		margin-top: -70px
+		padding: 130px 20px 40px 20px
+		p
+			font-size: 18px
+
+
+
+	.callback-section
+		.container
+			padding: 0 20px 0 20px
+		.text-form
+			grid-template-columns: auto
+		span.stroke
+			font-size: 50px
+		p
+			font-size: 18px
+			margin-bottom: 15px
+
+
+
+	.founders-section
+		.right-box-sm
+			top: 600px
+		.left-box-big
+			display: none
+		.founder
+			flex-direction: column
+			&:nth-child(odd)
+				flex-direction: column
+				.description
+					margin-right: 0
+			.description
+				margin-left: 0
+
+
+
+	.photo-section
+		padding-bottom: 70px
+		.info-block
+			top: 0
+			margin-top: -200px
+			margin-bottom: 40px
+		p
+			font-size: 16px
+			line-height: 1.3
+		.slide-item
+			height: auto
+			.res-imgs
+				grid-template-columns: auto
+				grid-gap: 10px
+				padding: 25px 15px
+		.owl-dots
+			margin-bottom: -22px
+			bottom: 0
+			left: 50%
+			margin-bottom: -55px
+			.owl-dot
+				&:not(:last-child)
+					margin-right: 10px
+
+
+				
+	.variants-section
+		padding: 40px 0
+		.variant
+			margin-bottom: 0
+			ul
+				li
+					padding: 10px 10px 10px 30px
+					font-size: 14px
+					&::before
+						left: 15px
+		.variants-block
+			grid-template-columns: auto
+			grid-gap: 35px
+
 
 	.info-items-second-section
 		padding: 40px 0
@@ -410,28 +520,12 @@
 		p
 			text-align: center
 
-	.why-best-section
-		.best-item
-			h4
-				font-size: 24px
-			.item-text
-				grid-template-columns: repeat(1, 1fr)
-				grid-gap: 30px
-				margin-bottom: 40px
-				.left-side, .right-side
-					padding-left: 29px
-					padding-top: 20px
-					&::after
-						top: 31px
-				.right-side
-					&::before
-						top: 24px
-
 	.callback-section
 		padding: 40px 0
 		text-align: center
-		.box
-			display: none
+		&.second
+			.container
+				padding: 0 20px
 		h5
 			line-height: 1
 			margin-bottom: 15px
@@ -462,8 +556,6 @@
 		&.second
 			background: url("../img/why-bg.jpg") center no-repeat
 			background-size: cover
-		h3.type-h
-			margin-bottom: 30px
 		h5
 			text-align: center
 			margin-bottom: 0
@@ -473,47 +565,77 @@
 			display: flex
 			justify-content: center
 
-	.photo-section
-		.slide-item
-			height: auto
-			.res-imgs
-				grid-template-columns: repeat(1, 1fr)
-				grid-gap: 15px
-		.owl-dots
-			margin-bottom: -22px
-
-	.variants-section
-		padding: 40px 0
-		.variant
-			margin-bottom: 30px
-
 	.our-result-section
 		.video-link
+			margin-bottom: 25px
+			width: 100%
 			.play-button
 				.play-descr
-					font-size: 18px
+					font-size: 14px
 					display: block
 					width: auto
-					padding-left: 0
-					margin-left: 10px
-					margin-right: 10px
+					line-height: 1
+					padding: 10px 0
+					margin: 0 10px
 					text-align: center
+		.result-block
+			flex-direction: column
+			&:nth-child(odd)
+				flex-direction: column
+				.result-text
+					margin: 0
 		.result-text
-			padding-left: 0
+			margin-left: 0
 			font-size: 20px
-			h4
-				text-align: center
-				line-height: 1.2
+			span
+				font-size: 18px
+			.name
+				margin-bottom: 0
 			p
 				margin-bottom: 20px
 			a
 				font-size: 20px
 				margin-bottom: 10px
+		.button
+			margin: 0
+	
+
+
+	.video-link
+		margin-bottom: 25px
+		width: 100%
+
+
+
+	.shop-results-section
+		.results-block
+			grid-template-columns: auto
+			grid-gap: 0
+			img
+				margin-bottom: 15px
+
+
+
+	.want-know-section
+		padding: 0
+		.result-block
+			flex-direction: column
+			.result-text
+				margin-left: 0
+				p
+					margin-bottom: 25px
+
+
 
 	.faq-section
 		.faq
 			p
 				margin: 15px 0 30px 0
+		.faq-block
+			grid-template-columns: auto
+			grid-gap: 0
+
+
 
 	.advantage-item
 		text-align: center
@@ -549,57 +671,62 @@
 				height: 250px
 
 	.form
-		border: 13px $accent solid
 		padding: 30px 20px 25px 20px
 		display: flex
 		flex-direction: column
-		input
-			padding-left: 20px
-			padding-right: 10px
-			border-color: #adadad
-			text-transform: uppercase
-			color: $fontcolor
-			&::placeholder
-				color: #000
-			&:focus
-				&::placeholder
-					color: transparent
+		.input
+			height: 50px
+		.checkbox-personal
+			p
+				font-size: 12px
+				br
+					display: none
 
-	.main-footer
-		padding: 30px 0 20px
-		.footer-logo
-			display: flex
-			justify-content: center
-			margin-bottom: 10px
-			img
-				flex-shrink: 0
-		.text-right
-			justify-content: center
-		.contacts
-			line-height: 1.5
-			.contact-item
-				text-align: right
-				a
-					color: $fontcolor
-					transition: color .25s ease
-					font-size: 16px
-					font-weight: 400
-					&:hover
-						text-decoration: none
-						color: $accent
-				&.contact-item-phone
+	.footer
+		.menu-time
+			flex-direction: column
+			padding-bottom: 25px
+			.footer-menu
+				flex-direction: column
+				align-items: center
+			.footer-menu
+				span
+					margin-right: 0
+				.menu
+					display: flex
+					flex-direction: column
 					a
-						font-weight: 600
-						font-size: 20px
+						&:not(:last-child)
+							margin-right: 0
+			.time
+				justify-content: center
+				margin-top: 15px
+		.main-footer
+			flex-direction: column
+			.footer-logo
+				margin-bottom: 15px
+			p
+				line-height: 1.3
+				margin: 0 0 15px 0
+				text-align: center
 		.footer-button
+			text-decoration: underline
 			text-align: center
 			display: block
-			margin-bottom: 7px
-			outline: none
-		.contacts
 			line-height: 1.3
-			.contact-item
-				text-align: center
+			&:hover
+				text-decoration: none
+		.contacts
+			display: flex
+			align-items: center
+			a
+				color: $fontcolor
+				display: flex
+				align-items: center
+				justify-content: center
+				text-decoration: none
+				&:not(:last-child)
+					margin-right: 17px
 
 	.popup-video
 		max-width: 100%
