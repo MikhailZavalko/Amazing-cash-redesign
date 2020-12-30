@@ -33,7 +33,7 @@ $ip=$_SERVER['REMOTE_ADDR'];
 
 	<meta name="yandex-verification" content="36862617fdf9f673" />
 
-	<link rel="stylesheet" href="css/main.min.css?v=1.2">
+	<link rel="stylesheet" href="css/main.min.css?v=1.8">
 
 </head>
 
@@ -42,6 +42,10 @@ $ip=$_SERVER['REMOTE_ADDR'];
 
 
 	<section id="home" class="top-section">
+
+		<div class="mobile-button">
+			<a class="button open-form-button" href="#take-consultation"><span>Получить консультацию</span></a>
+		</div>
 
 		<header class="header">
 			<div class="container">
@@ -521,9 +525,9 @@ $ip=$_SERVER['REMOTE_ADDR'];
 						<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 						<button class="button submit-button"><span>Рассчитать прибыль</span></button>
 						<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-							<p>Нажимая на кнопку, я даю свое согласие на обработку <br> персональных данных и соглашаюсь с условиями
-								<br>политики конфиденциальности
-							</p>
+							<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
+									персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+									конфиденциальности</a></p>
 						</div>
 					</form>
 				</div>
@@ -607,6 +611,24 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<p>Ниже вы можете увидеть наш ежемесячный оборот на Amazon</p>
 
 			<div class="gallery owl-carousel">
+
+				<div class="slide-item">
+					<h5>Декабрь 2020</h5>
+					<div class="res-imgs">
+						<img src="img/slides/9/4.jpg" alt="Декабрь 2020">
+						<img src="img/slides/9/5.jpg" alt="Декабрь 2020">
+						<img src="img/slides/9/6.jpg" alt="Декабрь 2020">
+					</div>
+				</div>
+
+				<div class="slide-item">
+					<h5>Ноябрь 2020</h5>
+					<div class="res-imgs">
+						<img src="img/slides/9/1.jpg" alt="Ноябрь 2020">
+						<img src="img/slides/9/2.jpg" alt="Ноябрь 2020">
+						<img src="img/slides/9/3.jpg" alt="Ноябрь 2020">
+					</div>
+				</div>
 
 				<div class="slide-item">
 					<h5>Октябрь 2020</h5>
@@ -1018,7 +1040,7 @@ $ip=$_SERVER['REMOTE_ADDR'];
 	<section class="want-know-section">
 		<div class="container">
 			<div class="result-block">
-				<a href="#video-6" class="video-link open-form-button"
+				<a href="#take-plan" class="video-link open-form-button"
 					style="background: url('img/video-thumb-6.jpg') center no-repeat;">
 					<span class="play-button">
 						<img src="img/play-button.png" alt="play" class="img-responsive play">
@@ -1330,9 +1352,9 @@ $ip=$_SERVER['REMOTE_ADDR'];
 						<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 						<button class="button submit-button"><span>Рассчитать прибыль</span></button>
 						<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-							<p>Нажимая на кнопку, я даю свое согласие на обработку <br> персональных данных и соглашаюсь с условиями
-								<br>политики конфиденциальности
-							</p>
+							<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
+									персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+									конфиденциальности</a></p>
 						</div>
 					</form>
 				</div>
@@ -1349,12 +1371,12 @@ $ip=$_SERVER['REMOTE_ADDR'];
 
 			<div class="menu-time">
 				<div class="footer-menu">
-					<span>Наш блог:</span>
+					<h2><span>Наш блог:</span></h2>
 					<nav class="menu">
-						<a href="#">О нас</a>
-						<a href="#">Полезные статьи</a>
-						<a href="#">Видео о бизнесе на Amazon</a>
-						<a href="#">Отзывы</a>
+						<a target="_blank" href="https://amazing-cash.ru/blog/"><h4>О нас</h4></a>
+						<a target="_blank" href="https://amazing-cash.ru/blog/index-blog.html"><h4>Полезные статьи</h4></a>
+						<a target="_blank" href="https://amazing-cash.ru/blog/index-video.html"><h4>Видео о бизнесе на Amazon</h4></a>
+						<a target="_blank" href="https://amazing-cash.ru/blog/single-reviews.html"><h4>Отзывы</h4></a>
 					</nav>
 				</div>
 				<div class="time">
@@ -1371,7 +1393,7 @@ $ip=$_SERVER['REMOTE_ADDR'];
 				</div>
 				<div class="contacts">
 					<a class="mail-link" href="mailto:info@amazing-cash.ru" class="mail-link">info@amazing-cash.ru</a>
-					<a href="https://vk.com/amazing_cash" target="_blank" class="yt-link"><img src="img/yt-footer.png"
+					<a href="https://www.youtube.com/channel/UCvJjPgSYbo7viX_AfuZCW0w" target="_blank" class="yt-link"><img src="img/yt-footer.png"
 							alt="yt"></a>
 					<a href="https://vk.com/amazing_cash" target="_blank" class="vk-link"><img src="img/vk-footer.png"
 							alt="vk"></a>
@@ -1415,11 +1437,11 @@ $ip=$_SERVER['REMOTE_ADDR'];
 				allowfullscreen></iframe>
 		</div>
 
-		<div class="popup-video zoom-anim-dialog" id="video-6">
+		<!-- <div class="popup-video zoom-anim-dialog" id="video-6">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/-jPp8DJQcWQ" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
-		</div>
+		</div> -->
 
 
 
@@ -1475,9 +1497,9 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 			<button class="button takepres-button"><span>Получить предложение</span></button>
 			<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
-						href="#personal">обработку персональных данных</a> и соглашаюсь с условиями <br class="d-none d-lg-block"><a
-						class="politic-button open-form-button" href="#politic">политики конфиденциальности</a></p>
+				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
+						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+						конфиденциальности</a></p>
 			</div>
 		</form>
 
@@ -1505,9 +1527,9 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 			<button class="button takepres-button"><span>Оставить заявку</span></button>
 			<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
-						href="#personal">обработку персональных данных</a> и соглашаюсь с условиями <br class="d-none d-lg-block"><a
-						class="politic-button open-form-button" href="#politic">политики конфиденциальности</a></p>
+				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
+						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+						конфиденциальности</a></p>
 			</div>
 		</form>
 
@@ -1535,9 +1557,9 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 			<button class="button takepres-button"><span>Оставить заявку</span></button>
 			<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
-						href="#personal">обработку персональных данных</a> и соглашаюсь с условиями <br class="d-none d-lg-block"><a
-						class="politic-button open-form-button" href="#politic">политики конфиденциальности</a></p>
+				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
+						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+						конфиденциальности</a></p>
 			</div>
 		</form>
 
@@ -1565,9 +1587,9 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 			<button class="button takepres-button"><span>Оставить заявку</span></button>
 			<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
-						href="#personal">обработку персональных данных</a> и соглашаюсь с условиями <br class="d-none d-lg-block"><a
-						class="politic-button open-form-button" href="#politic">политики конфиденциальности</a></p>
+				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
+						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+						конфиденциальности</a></p>
 			</div>
 		</form>
 
@@ -1595,9 +1617,9 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 			<button class="button takepres-button"><span>Оставить заявку</span></button>
 			<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
-						href="#personal">обработку персональных данных</a> и соглашаюсь с условиями <br class="d-none d-lg-block"><a
-						class="politic-button open-form-button" href="#politic">политики конфиденциальности</a></p>
+				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
+						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+						конфиденциальности</a></p>
 			</div>
 		</form>
 

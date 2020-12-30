@@ -85,7 +85,7 @@ var windowHeight = $(window).height();
 
 $(document).ready(function($) {
 	$(window).on('scroll touchmove', function () {
-		$('.header').toggleClass('scrolled', $(document).scrollTop() > windowHeight);
+		$('.header, .mobile-button').toggleClass('scrolled', $(document).scrollTop() > windowHeight);
 	}).scroll();
 });
 	/* SCROLL FOR HEADER */

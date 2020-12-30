@@ -121,8 +121,28 @@ h3.type-head
 			position: relative
 			color: #fff
 
-.button-wrapper
-	padding: 0 50px
+.mobile-button
+	display: none
+	transition: $time
+	width: 100%
+	display: flex
+	justify-content: center
+	position: fixed
+	top: -50px
+	right: 0
+	padding: 7px
+	z-index: 3
+	opacity: 0
+	visibility: hidden
+	.button
+		height: 45px
+		font-weight: 400
+	&.scrolled
+		opacity: 1
+		visibility: visible
+		top: 0
+		background-color: #1f1d1c
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5)
 
 .button
 	color: #161616
@@ -745,7 +765,6 @@ h3.type-head
 				background: $accent
 			ul
 				li
-					background: #ffffff
 					&::before
 						background: url(../img/confirmed-yellow.png) center no-repeat
 		.name
@@ -772,6 +791,7 @@ h3.type-head
 				list-style-type: none
 				line-height: 1.4
 				padding: 13px 12px 13px 44px
+				background: #ffffff
 				position: relative
 				span
 					font-weight: 800
@@ -965,7 +985,7 @@ h3.type-head
 		margin-bottom: 50px
 	.faq-block
 		display: grid
-		 : repeat(2, 1fr)
+		grid-template-columns: repeat(2, 1fr)
 		grid-gap: 110px
 	.faq
 		.faq-name
@@ -1283,15 +1303,22 @@ h3.type-head
 		.footer-menu
 			font-size: 16px
 			font-weight: 700
+			h2, h4
+				font-size: 16px
+				margin: 0
+				display: inline-block
 			span
 				margin-right: 57px
 			.menu
 				a
 					color: $fontcolor
+					h4
+						text-decoration: underline
 					&:not(:last-child)
 						margin-right: 55px
 					&:hover
-						text-decoration: none
+						h4
+							text-decoration: none
 		.time
 			span
 				font-size: 14px
