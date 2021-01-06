@@ -33,21 +33,40 @@ $ip=$_SERVER['REMOTE_ADDR'];
 
 	<meta name="yandex-verification" content="36862617fdf9f673" />
 
-	<link rel="stylesheet" href="css/main.min.css?v=1.9">
+	<link rel="stylesheet" href="css/main.min.css?v=1.11">
+
+	<script>
+		window.onload = function () {
+			document.body.classList.add('loaded_hiding');
+			window.setTimeout(function () {
+				document.body.classList.add('loaded');
+				document.body.classList.remove('loaded_hiding');
+			}, 500);
+		}
+	</script>
 
 </head>
 
 <body>
 
 
+	<div class="preloader">
+		<svg class="preloader_image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+			<circle cx="50" cy="50" fill="none" stroke="#FF9900" stroke-width="10" r="40"
+				stroke-dasharray="188.49555921538757 64.83185307179586" transform="matrix(1,0,0,1,0,0)"
+				style="transform:matrix(1, 0, 0, 1, 0, 0);"></circle>
+		</svg>
+	</div>
 
-	<section id="home" class="top-section">
+
+
+	<div class="headers">
 
 		<div class="mobile-button">
 			<a class="button open-form-button" href="#take-consultation"><span>Получить консультацию</span></a>
 		</div>
 
-		<header class="header">
+		<header class="header header-fixed">
 			<div class="container">
 				<div class="left-side">
 					<a href="#home" class="header-link logo">
@@ -64,62 +83,88 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			</div>
 		</header>
 
-		<div class="container">
+	</div>
 
-			<div class="top-logo-sm">
-				<img src="img/logo.png" alt="logo" class="img-responsive">
-			</div>
 
-			<div class="main-text">
-				<h1>
-					<span class="head-bg"><span>Готовый интернет-бизнес по продаже товаров</span></span>
-					<span class="head-bg"><span>на территории США через площадку Amazon</span></span>
-					<span class="head-bg"><span>с прибылью от $3000 в месяц</span></span>
-				</h1>
-				<p><span>Вы будете получать прибыль в долларах</span> из любой точки мира от вашего автоматизированного
-					<br>безубыточного интернет-магазина через крупнейший в мире маркетплейс
-				</p>
-			</div>
+	<div class="container-parallax">
+		<section id="home" class="top-section">
 
-			<div class="top-section-links">
 
-				<a class="button open-form-button" href="#take-sentence"><span>Получить предложение</span></a>
+			<header class="header">
+				<div class="container">
+					<div class="left-side">
+						<a href="#home" class="header-link logo">
+							<img src="img/logo.png" alt="logo" class="img-responsive">
+						</a>
+					</div>
 
-				<div class="publicaation">
-					<p>Публикации в СМИ о нас:</p>
-					<div class="links">
-						<div class="line">
-							<a href="https://vc.ru/trade/55789-kak-prodvigat-tovar-na-amazon" target="_blank"><img
-									src="img/piblic-1.png" alt="icon" class="img-responsive"></a>
-							<a href="https://moneymakerfactory.ru/internet/kak-zarabatyivat-na-amazon/" target="_blank"
-								class="sm-public"><img src="img/piblic-2.png" alt="icon" class="img-responsive"></a>
-							<a href="https://the-locality.ru/amazingcash/" target="_blank" class="sm-public philosophzer"><img
-									src="img/piblic-3.png" alt="icon" class="img-responsive"></a>
-							<a href="https://wall.wayxar.ru/finance/kak_postroit_dokhod_v_dollarakh_zhivya_v_rossii_pri_padayushchem_ruble"
-								target="_blank" rel="nofollow" class="sm-public"><img src="img/piblic-4.png" alt="icon"
-									class="img-responsive"></a>
-						</div>
-						<div class="line">
-							<a href="https://bi-school.ru/kak-zapustit-7-magazinov-na-amazon/" target="_blank" class="sm-public"><img
-									src="img/piblic-5.png" alt="icon" class="img-responsive"></a>
-							<a href="https://svdelo.ru/biznes-na-amazon/" target="_blank" class="sm-public"><img
-									src="img/piblic-6.png" alt="icon" class="img-responsive"></a>
-							<a href="https://slovodelu.by/expert-opinion/kak-zapustit-internet-magazin-v-ssha-i-zarabatyvat-v-dollarakh/"
-								target="_blank" rel="nofollow" class="sm-public"><img src="img/piblic-7.png" alt="icon"
-									class="img-responsive"></a>
-							<a href="https://exiterra.com/blog/biznes-idei/prodazhi-tovarov-v-ssha-cherez-sayt-amazon-iz-lyuboy-tochki-mira/"
-								target="_blank" rel="nofollow" class="sm-public"><img src="img/piblic-8.png" alt="icon"
-									class="img-responsive"></a>
-							<a href="https://ul.aif.ru/tovary_i_uslugi/pochemu_lyudi_teryayut_dengi_na_amazon" target="_blank"
-								rel="nofollow" class="sm-public"><img src="img/piblic-9.png" alt="icon" class="img-responsive"></a>
+					<div class="right-side">
+						<a class="mail-link" href="mailto:info@amazing-cash.ru "><img src="img/mail.png"
+								alt="mail">info@amazing-cash.ru</a>
+						<a class="button button-header open-form-button" href="#take-consultation"><span>Получить
+								консультацию</span></a>
+					</div>
+				</div>
+			</header>
+
+
+			<div class="container">
+
+				<div class="top-logo-sm">
+					<img src="img/logo.png" alt="logo" class="img-responsive">
+				</div>
+
+				<div class="main-text">
+					<h1>
+						<span class="head-bg"><span>Готовый интернет-бизнес по продаже товаров</span></span>
+						<span class="head-bg"><span>на территории США через площадку Amazon</span></span>
+						<span class="head-bg"><span>с прибылью от $3000 в месяц</span></span>
+					</h1>
+					<p><span>Вы будете получать прибыль в долларах</span> из любой точки мира от вашего автоматизированного
+						<br><strong>безубыточного</strong> интернет-магазина через крупнейший в мире маркетплейс
+					</p>
+				</div>
+
+				<div class="top-section-links">
+
+					<a class="button open-form-button" href="#take-sentence"><span>Получить предложение</span></a>
+
+					<div class="publicaation">
+						<p>Публикации в СМИ о нас:</p>
+						<div class="links">
+							<div class="line">
+								<a href="https://vc.ru/trade/55789-kak-prodvigat-tovar-na-amazon" target="_blank"><img
+										src="img/piblic-1.png" alt="icon" class="img-responsive"></a>
+								<a href="https://moneymakerfactory.ru/internet/kak-zarabatyivat-na-amazon/" target="_blank"
+									class="sm-public"><img src="img/piblic-2.png" alt="icon" class="img-responsive"></a>
+								<a href="https://the-locality.ru/amazingcash/" target="_blank" class="sm-public philosophzer"><img
+										src="img/piblic-3.png" alt="icon" class="img-responsive"></a>
+								<a href="https://wall.wayxar.ru/finance/kak_postroit_dokhod_v_dollarakh_zhivya_v_rossii_pri_padayushchem_ruble"
+									target="_blank" rel="nofollow" class="sm-public"><img src="img/piblic-4.png" alt="icon"
+										class="img-responsive"></a>
+							</div>
+							<div class="line">
+								<a href="https://bi-school.ru/kak-zapustit-7-magazinov-na-amazon/" target="_blank"
+									class="sm-public"><img src="img/piblic-5.png" alt="icon" class="img-responsive"></a>
+								<a href="https://svdelo.ru/biznes-na-amazon/" target="_blank" class="sm-public"><img
+										src="img/piblic-6.png" alt="icon" class="img-responsive"></a>
+								<a href="https://slovodelu.by/expert-opinion/kak-zapustit-internet-magazin-v-ssha-i-zarabatyvat-v-dollarakh/"
+									target="_blank" rel="nofollow" class="sm-public"><img src="img/piblic-7.png" alt="icon"
+										class="img-responsive"></a>
+								<a href="https://exiterra.com/blog/biznes-idei/prodazhi-tovarov-v-ssha-cherez-sayt-amazon-iz-lyuboy-tochki-mira/"
+									target="_blank" rel="nofollow" class="sm-public"><img src="img/piblic-8.png" alt="icon"
+										class="img-responsive"></a>
+								<a href="https://ul.aif.ru/tovary_i_uslugi/pochemu_lyudi_teryayut_dengi_na_amazon" target="_blank"
+									rel="nofollow" class="sm-public"><img src="img/piblic-9.png" alt="icon" class="img-responsive"></a>
+							</div>
 						</div>
 					</div>
+
 				</div>
 
 			</div>
-
-		</div>
-	</section>
+		</section>
+	</div>
 
 
 
@@ -130,42 +175,58 @@ $ip=$_SERVER['REMOTE_ADDR'];
 
 				<div class="info-item">
 					<div class="item-img"><img src="img/advantages-icon-1.png" alt="about" class="img-responsive"></div>
-					<div class="text"><p>Первая прибыль в срок <br>от <span>45 дней</span></p></div>
+					<div class="text">
+						<p>Первая прибыль в срок <br>от <span>45 дней</span></p>
+					</div>
 				</div>
 
 				<div class="info-item">
 					<div class="item-img"><img src="img/advantages-icon-2.png" alt="about" class="img-responsive"></div>
-					<div class="text"><p>Окупаемость вложений <br>от <span>4 до 8 месяцев</span></p></div>
+					<div class="text">
+						<p>Окупаемость вложений <br>от <span>4 до 8 месяцев</span></p>
+					</div>
 				</div>
 
 				<div class="info-item">
 					<div class="item-img"><img src="img/advantages-icon-3.png" alt="about" class="img-responsive"></div>
-					<div class="text"><p>Бизнес-модель отработана <br>на более чем <span>50 магазинах</span></p></div>
+					<div class="text">
+						<p>Бизнес-модель отработана <br>на более чем <span>50 магазинах</span></p>
+					</div>
 				</div>
 
 				<div class="info-item">
 					<div class="item-img"><img src="img/advantages-icon-4.png" alt="about" class="img-responsive"></div>
-					<div class="text"><p>Полные вложения в запуск <br>бизнеса от <span>440 000</span> руб.</p></div>
+					<div class="text">
+						<p>Полные вложения в запуск <br>бизнеса от <span>440 000</span> руб.</p>
+					</div>
 				</div>
 
 				<div class="info-item">
 					<div class="item-img"><img src="img/advantages-icon-5.png" alt="about" class="img-responsive"></div>
-					<div class="text"><p>Бизнес на развитом рынке <br>США с <span>прибылью <br>в долларах</span></p></div>
+					<div class="text">
+						<p>Бизнес на развитом рынке <br>США с <span>прибылью <br>в долларах</span></p>
+					</div>
 				</div>
 
 				<div class="info-item">
 					<div class="item-img"><img src="img/advantages-icon-6.png" alt="about" class="img-responsive"></div>
-					<div class="text"><p>Оборот наших собственных <br>магазинов более <br><span>$ 100 000 в мес.</span></p></div>
+					<div class="text">
+						<p>Оборот наших собственных <br>магазинов более <br><span>$ 100 000 в мес.</span></p>
+					</div>
 				</div>
 
 				<div class="info-item">
 					<div class="item-img"><img src="img/advantages-icon-7.png" alt="about" class="img-responsive"></div>
-					<div class="text"><p>Опыт не требуется, мы всему <br>вас научим или <span>возьмем <br>магазин в управление</span></p></div>
+					<div class="text">
+						<p>Опыт не требуется, мы всему <br>вас научим или <span>возьмем <br>магазин в управление</span></p>
+					</div>
 				</div>
 
 				<div class="info-item">
 					<div class="item-img"><img src="img/advantages-icon-8.png" alt="about" class="img-responsive"></div>
-					<div class="text"><p>Собственный товар <br>не требуется, мы подбираем <br>его на основе <span>аналитики</span></p></div>
+					<div class="text">
+						<p>Собственный товар <br>не требуется, мы подбираем <br>его на основе <span>аналитики</span></p>
+					</div>
 				</div>
 
 			</div>
@@ -196,7 +257,8 @@ $ip=$_SERVER['REMOTE_ADDR'];
 					этом доставкой товара клиентам занимается сам <br>Amazon. Мы запускаем магазины на Amazon "под ключ", начиная
 					от
 					регистрации <br>продавца на площадке и выбора подходящего товара до подбора надежных <br>поставщиков и запуска
-					стабильных продаж.</p>
+					стабильных продаж.
+				</p>
 			</div>
 		</div>
 	</section>
@@ -525,8 +587,10 @@ $ip=$_SERVER['REMOTE_ADDR'];
 						<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 						<button class="button submit-button"><span>Рассчитать прибыль</span></button>
 						<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-							<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
-									персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+							<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
+									href="#personal">обработку
+									персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button"
+									href="#politic">политики
 									конфиденциальности</a></p>
 						</div>
 					</form>
@@ -1352,8 +1416,10 @@ $ip=$_SERVER['REMOTE_ADDR'];
 						<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 						<button class="button submit-button"><span>Рассчитать прибыль</span></button>
 						<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-							<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
-									персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+							<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
+									href="#personal">обработку
+									персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button"
+									href="#politic">политики
 									конфиденциальности</a></p>
 						</div>
 					</form>
@@ -1366,17 +1432,25 @@ $ip=$_SERVER['REMOTE_ADDR'];
 
 
 
-	<footer class="footer">
+	<section class="footer">
 		<div class="container">
 
 			<div class="menu-time">
 				<div class="footer-menu">
 					<h2><span>Наш блог:</span></h2>
 					<nav class="menu">
-						<a target="_blank" href="https://amazing-cash.ru/blog/"><h4>О нас</h4></a>
-						<a target="_blank" href="https://amazing-cash.ru/blog/index-blog.html"><h4>Полезные статьи</h4></a>
-						<a target="_blank" href="https://amazing-cash.ru/blog/index-video.html"><h4>Видео о бизнесе на Amazon</h4></a>
-						<a target="_blank" href="https://amazing-cash.ru/blog/single-reviews.html"><h4>Отзывы</h4></a>
+						<a target="_blank" href="https://amazing-cash.ru/blog/">
+							<h4>О нас</h4>
+						</a>
+						<a target="_blank" href="https://amazing-cash.ru/blog/index-blog.html">
+							<h4>Полезные статьи</h4>
+						</a>
+						<a target="_blank" href="https://amazing-cash.ru/blog/index-video.html">
+							<h4>Видео о бизнесе на Amazon</h4>
+						</a>
+						<a target="_blank" href="https://amazing-cash.ru/blog/single-reviews.html">
+							<h4>Отзывы</h4>
+						</a>
 					</nav>
 				</div>
 				<div class="time">
@@ -1393,49 +1467,49 @@ $ip=$_SERVER['REMOTE_ADDR'];
 				</div>
 				<div class="contacts">
 					<a class="mail-link" href="mailto:info@amazing-cash.ru" class="mail-link">info@amazing-cash.ru</a>
-					<a href="https://www.youtube.com/channel/UCvJjPgSYbo7viX_AfuZCW0w" target="_blank" class="yt-link"><img src="img/yt-footer.png"
-							alt="yt"></a>
+					<a href="https://www.youtube.com/channel/UCvJjPgSYbo7viX_AfuZCW0w" target="_blank" class="yt-link"><img
+							src="img/yt-footer.png" alt="yt"></a>
 					<a href="https://vk.com/amazing_cash" target="_blank" class="vk-link"><img src="img/vk-footer.png"
 							alt="vk"></a>
 				</div>
 			</div>
 
 		</div>
-	</footer>
+	</section>
 
 
 
 	<div class="d-none">
 
-		<!-- <div class="popup-video zoom-anim-dialog" id="video-1">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/wjypoLkH5-c" frameborder="0"
+		<div class="popup-video zoom-anim-dialog" id="video-1">
+			<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/wjypoLkH5-c" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
 		</div>
 
 		<div class="popup-video zoom-anim-dialog" id="video-2">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/HttYB08TZ7M" frameborder="0"
+			<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/HttYB08TZ7M" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
 		</div>
 
 		<div class="popup-video zoom-anim-dialog" id="video-3">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/zRA-OI4nvgU" frameborder="0"
+			<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/zRA-OI4nvgU" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
 		</div>
 
 		<div class="popup-video zoom-anim-dialog" id="video-4">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/CxKPNwrFcWo" frameborder="0"
+			<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/CxKPNwrFcWo" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
 		</div>
 
 		<div class="popup-video zoom-anim-dialog" id="video-5">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/GcedNHbS7EE" frameborder="0"
+			<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/GcedNHbS7EE" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
-		</div> -->
+		</div>
 
 		<!-- <div class="popup-video zoom-anim-dialog" id="video-6">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/-jPp8DJQcWQ" frameborder="0"
@@ -1497,8 +1571,10 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 			<button class="button takepres-button"><span>Получить предложение</span></button>
 			<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
-						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
+						href="#personal">обработку
+						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button"
+						href="#politic">политики
 						конфиденциальности</a></p>
 			</div>
 		</form>
@@ -1527,8 +1603,10 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 			<button class="button takepres-button"><span>Оставить заявку</span></button>
 			<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
-						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
+						href="#personal">обработку
+						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button"
+						href="#politic">политики
 						конфиденциальности</a></p>
 			</div>
 		</form>
@@ -1557,8 +1635,10 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 			<button class="button takepres-button"><span>Оставить заявку</span></button>
 			<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
-						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
+						href="#personal">обработку
+						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button"
+						href="#politic">политики
 						конфиденциальности</a></p>
 			</div>
 		</form>
@@ -1587,8 +1667,10 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 			<button class="button takepres-button"><span>Оставить заявку</span></button>
 			<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
-						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
+						href="#personal">обработку
+						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button"
+						href="#politic">политики
 						конфиденциальности</a></p>
 			</div>
 		</form>
@@ -1617,8 +1699,10 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<!-- <div class="g-recaptcha" data-sitekey="6Lei694UAAAAAK4I7R9SD_0pd5MLCNIEnkbh08LH"></div> -->
 			<button class="button takepres-button"><span>Оставить заявку</span></button>
 			<div class="checkbox-personal"><input class="checkbox" type="checkbox" checked required />
-				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button" href="#personal">обработку
-						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button" href="#politic">политики
+				<p>Нажимая на кнопку, я даю свое согласие на <a class="politic-button open-form-button"
+						href="#personal">обработку
+						персональных данных</a> и соглашаюсь с условиями <a class="politic-button open-form-button"
+						href="#politic">политики
 						конфиденциальности</a></p>
 			</div>
 		</form>

@@ -1,13 +1,13 @@
-$(function() {
+$(function () {
 
 
 
 	/* SHOW/HIDDEN FAQ */
-	$('.faq-name').click(function() {
+	$('.faq-name').click(function () {
 		$(this).toggleClass('active')
-		.next()[$(this)
-		.next()
-		.is(':hidden') ? "slideDown" : "slideUp"](400);
+			.next()[$(this)
+				.next()
+				.is(':hidden') ? "slideDown" : "slideUp"](400);
 	});
 	/* SHOW/HIDDEN FAQ */
 
@@ -40,9 +40,9 @@ $(function() {
 		removalDelay: 300,
 		mainClass: 'my-mfp-slide-bottom',
 		callbacks: {
-			beforeOpen: function() {
+			beforeOpen: function () {
 				var $triggerEl = $(this.st.el),
-				newClass = $triggerEl.data("modal-class");
+					newClass = $triggerEl.data("modal-class");
 				if (newClass) {
 					this.st.mainClass = this.st.mainClass + ' ' + newClass;
 				}
@@ -54,7 +54,7 @@ $(function() {
 
 
 	/* E-mail Ajax Send */
-	$("form").submit(function(e) {
+	$("form").submit(function (e) {
 		e.preventDefault;
 		var th = $(this);
 		$('.form').addClass('loading');
@@ -62,10 +62,10 @@ $(function() {
 			type: "POST",
 			url: "../send.php",
 			data: th.serialize()
-		}).done(function() {
+		}).done(function () {
 			$('.form').removeClass('loading');
 			$(".success").addClass("visible");
-			setTimeout(function() {
+			setTimeout(function () {
 				// Done Functions
 				th.trigger("reset");
 				$(".success").removeClass("visible");
@@ -83,12 +83,12 @@ $(function() {
 /* SCROLL FOR HEADER */
 var windowHeight = $(window).height();
 
-$(document).ready(function($) {
+$(document).ready(function ($) {
 	$(window).on('scroll touchmove', function () {
-		$('.header, .mobile-button').toggleClass('scrolled', $(document).scrollTop() > windowHeight);
+		$('.header-fixed, .mobile-button').toggleClass('scrolled', $(document).scrollTop() > windowHeight);
 	}).scroll();
 });
-	/* SCROLL FOR HEADER */
+/* SCROLL FOR HEADER */
 
 
 
@@ -102,4 +102,4 @@ $(".header-link").click(function () {
 	$('.menu').removeClass('active');
 	return false;
 });
-	/* MENU TRIGGER FOR SCROLL */
+/* MENU TRIGGER FOR SCROLL */
