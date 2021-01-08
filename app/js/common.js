@@ -2,6 +2,12 @@ $(function () {
 
 
 
+	/* ANIMATIONS */
+	new WOW().init();
+	/* ANIMATIONS */
+
+
+
 	/* SHOW/HIDDEN FAQ */
 	$('.faq-name').click(function () {
 		$(this).toggleClass('active')
