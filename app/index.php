@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
 $ip=$_SERVER['REMOTE_ADDR']; 
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -1749,7 +1749,7 @@ $ip=$_SERVER['REMOTE_ADDR'];
 
 	</div>
 	
-	<script src="js/scripts.min.js?v=1.1"></script>
+	<script src="js/scripts.min.js?v=1.2"></script>
 
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
