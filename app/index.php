@@ -32,7 +32,7 @@ $ip=$_SERVER['REMOTE_ADDR'];
 
 	<meta name="yandex-verification" content="36862617fdf9f673" />
 
-	<link rel="stylesheet" href="css/main.min.css?v=1.2">
+	<link rel="stylesheet" href="css/main.min.css?v=1.4">
 
 	<script>
 		window.onload = function () {
@@ -69,7 +69,7 @@ $ip=$_SERVER['REMOTE_ADDR'];
 			<div class="container">
 				<div class="left-side">
 					<a href="#home" class="header-link logo">
-						<img src="img/logo.png" alt="logo" class="img-responsive">
+						<img src="img/logo.png?v=1.1" alt="logo" class="img-responsive">
 					</a>
 				</div>
 
@@ -93,7 +93,7 @@ $ip=$_SERVER['REMOTE_ADDR'];
 				<div class="container">
 					<div class="left-side wow bounceInLeft" data-wow-offset="250" data-wow-delay="0.2s">
 						<a href="#home" class="header-link logo">
-							<img src="img/logo.png" alt="logo" class="img-responsive">
+							<img src="img/logo.png?v=1.1" alt="logo" class="img-responsive">
 						</a>
 					</div>
 
@@ -172,56 +172,64 @@ $ip=$_SERVER['REMOTE_ADDR'];
 		<div class="container">
 			<div class="info-items-grid">
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200"> -->
 					<div class="item-img"><img src="img/advantages-icon-1.png" alt="about" class="img-responsive"></div>
 					<div class="text">
 						<p>Первая прибыль в срок <br>от <span>45 дней</span></p>
 					</div>
 				</div>
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.2s">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.2s"> -->
 					<div class="item-img"><img src="img/advantages-icon-2.png" alt="about" class="img-responsive"></div>
 					<div class="text">
 						<p>Окупаемость вложений <br>от <span>4 до 8 месяцев</span></p>
 					</div>
 				</div>
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.4s">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.4s"> -->
 					<div class="item-img"><img src="img/advantages-icon-3.png" alt="about" class="img-responsive"></div>
 					<div class="text">
 						<p>Бизнес-модель отработана <br>на более чем <span>50 магазинах</span></p>
 					</div>
 				</div>
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.6s">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.6s"> -->
 					<div class="item-img"><img src="img/advantages-icon-4.png" alt="about" class="img-responsive"></div>
 					<div class="text">
 						<p>Полные вложения в запуск <br>бизнеса от <span>440 000</span> руб.</p>
 					</div>
 				</div>
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200"> -->
 					<div class="item-img"><img src="img/advantages-icon-5.png" alt="about" class="img-responsive"></div>
 					<div class="text">
 						<p>Бизнес на развитом рынке <br>США с <span>прибылью <br>в долларах</span></p>
 					</div>
 				</div>
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.2s">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.2s"> -->
 					<div class="item-img"><img src="img/advantages-icon-6.png" alt="about" class="img-responsive"></div>
 					<div class="text">
 						<p>Оборот наших собственных <br>магазинов более <br><span>$ 100 000 в мес.</span></p>
 					</div>
 				</div>
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.4s">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.4s"> -->
 					<div class="item-img"><img src="img/advantages-icon-7.png" alt="about" class="img-responsive"></div>
 					<div class="text">
 						<p>Опыт не требуется, мы всему <br>вас научим или <span>возьмем <br>магазин в управление</span></p>
 					</div>
 				</div>
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.6s">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.6s"> -->
 					<div class="item-img"><img src="img/advantages-icon-8.png" alt="about" class="img-responsive"></div>
 					<div class="text">
 						<p>Собственный товар <br>не требуется, мы подбираем <br>его на основе <span>аналитики</span></p>
@@ -273,27 +281,31 @@ $ip=$_SERVER['REMOTE_ADDR'];
 
 			<div class="steps-grid">
 
-				<div class="steps-item wow fadeInUp" data-wow-offset="250">
+				<div class="steps-item">
+				<!-- <div class="steps-item wow fadeInUp" data-wow-offset="250"> -->
 					<span class="big-num">1</span>
 					<span class="num">1</span>
 					<p>На основе аналитики с помощью сервисов мы выбираем для вас <span>товар</span>, который <span>100%</span>
 						будет пользоваться спросом на Amazon</p>
 				</div>
 
-				<div class="steps-item wow fadeInUp" data-wow-offset="250" data-wow-delay="0.2s">
+				<div class="steps-item">
+				<!-- <div class="steps-item wow fadeInUp" data-wow-offset="250" data-wow-delay="0.2s"> -->
 					<span class="big-num">2</span>
 					<span class="num">2</span>
 					<p>Находим <span>поставщика в Китае или США</span>, наши подрядчики в Китае или США проверяют <br>качество
 						товара, заказываем партию</p>
 				</div>
 
-				<div class="steps-item wow fadeInUp" data-wow-offset="250" data-wow-delay="0.4s">
+				<div class="steps-item">
+				<!-- <div class="steps-item wow fadeInUp" data-wow-offset="250" data-wow-delay="0.4s"> -->
 					<span class="big-num">3</span>
 					<span class="num">3</span>
 					<p>Доставляем партию <br>товара на склад <span>Amazon <br>в США</span> оптимальным способом</p>
 				</div>
 
-				<div class="steps-item wow fadeInUp" data-wow-offset="250" data-wow-delay="0.6s">
+				<div class="steps-item">
+				<!-- <div class="steps-item wow fadeInUp" data-wow-offset="250" data-wow-delay="0.6s"> -->
 					<span class="big-num">4</span>
 					<span class="num">4</span>
 					<p>Запускаем <span>продажи вашего товара</span>, раскручиваем ваш магазин, работаем с лучшими американскими
@@ -301,7 +313,8 @@ $ip=$_SERVER['REMOTE_ADDR'];
 						Amazon</p>
 				</div>
 
-				<div class="steps-item wow fadeInUp" data-wow-offset="250" data-wow-delay="0.8s">
+				<div class="steps-item">
+				<!-- <div class="steps-item wow fadeInUp" data-wow-offset="250" data-wow-delay="0.8s"> -->
 					<span class="big-num">5</span>
 					<span class="num">5</span>
 					<p>Клиенты из США <br>покупают ваш продукт <br>за доллары прямо на <br>сайте Amazon, вы получаете прибыль в
@@ -314,28 +327,33 @@ $ip=$_SERVER['REMOTE_ADDR'];
 
 			<div class="info-items-grid">
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200"> -->
 					<div class="item-img"><img src="img/advantages-icon-9.png" alt="about" class="img-responsive"></div>
 					<p>Полная автоматизация <br>бизнеса, доставкой <br>товара занимается <br>сам <span>Amazon</span></p>
 				</div>
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.2s">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.2s"> -->
 					<div class="item-img"><img src="img/advantages-icon-10.png" alt="about" class="img-responsive"></div>
 					<p>Вам не нужно общаться <br>с клиентами, они <br><span>оплачивают</span> ваш товар <br><span>прямо на
 							сайте</span></p>
 				</div>
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.4s">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.4s"> -->
 					<div class="item-img"><img src="img/advantages-icon-11.png" alt="about" class="img-responsive"></div>
 					<p>Знание английского <br>языка не требуется, <br><span>достаточно <br>онлайн-переводчика</span></p>
 				</div>
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.6s">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.6s"> -->
 					<div class="item-img"><img src="img/advantages-icon-12.png" alt="about" class="img-responsive"></div>
 					<p>Безопасный <br>и <span>легальный бизнес</span> <br>с огромными <br>перспективами для роста</p>
 				</div>
 
-				<div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.8s">
+				<div class="info-item">
+				<!-- <div class="info-item wow bounceInUp" data-wow-offset="200" data-wow-delay="0.8s"> -->
 					<div class="item-img"><img src="img/advantages-icon-13.png" alt="about" class="img-responsive"></div>
 					<p>Заработок <br>в <span>стабильной валюте <br>($)</span>, к которой привязаны <br>все цены в мире</p>
 				</div>
@@ -1749,7 +1767,7 @@ $ip=$_SERVER['REMOTE_ADDR'];
 
 	</div>
 	
-	<script src="js/scripts.min.js?v=1.2"></script>
+	<script src="js/scripts.min.js?v=1.3"></script>
 
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">

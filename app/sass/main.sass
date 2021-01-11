@@ -325,21 +325,21 @@ h3.type-head
 		color: #fff
 		.head-bg
 			display: inline-block
-			position: relative
-			padding-right: 10px
-			&::after
-				content: ''
-				position: absolute
-				top: 0
-				left: -17px
-				clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%)
-				background: url('../img/headers-bg.png') center no-repeat
-				width: calc(100% + 17px) 
-				height: 100%
-				z-index: 1
-			span
-				z-index: 2
-				position: relative
+			// position: relative
+			// padding-right: 10px
+			// &::after
+			// 	content: ''
+			// 	position: absolute
+			// 	top: 0
+			// 	left: -17px
+			// 	clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%)
+			// 	background: url('../img/headers-bg.png') center no-repeat
+			// 	width: calc(100% + 17px) 
+			// 	height: 100%
+			// 	z-index: 1
+			// span
+			// 	z-index: 2
+			// 	position: relative
 	p
 		font-size: 18px
 		font-weight: 400
@@ -1517,16 +1517,22 @@ h3.type-head
 .spinner
 	position: relative
 
-.thank-you-page
+.top-section.thank-you-page
 	h1
 		text-align: center
+		margin-bottom: 30px
+		font-size: 55px
 	h2
 		text-align: center
 		font-size: 36px
 		font-weight: 400
+		margin-bottom: 65px
 	p
 		font-size: 18px
 		margin-bottom: 50px
 		text-align: center
+	.button
+		max-width: 495px
+		margin: 0 auto
 
 @import "media" // Always at the end
