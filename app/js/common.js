@@ -65,27 +65,6 @@ $(function () {
 
 
 	/* E-mail Ajax Send */
-	// $("form").submit(function (e) {
-	// 	e.preventDefault;
-	// 	var th = $(this);
-	// 	$('.form').addClass('loading');
-	// 	$.ajax({
-	// 		type: "POST",
-	// 		url: "../send.php",
-	// 		data: th.serialize()
-	// 	}).done(function () {
-	// 		$('.form').removeClass('loading');
-	// 		$(".success").addClass("visible");
-	// 		setTimeout(function () {
-	// 			// Done Functions
-	// 			th.trigger("reset");
-	// 			$(".success").removeClass("visible");
-	// 			$.magnificPopup.close();
-	// 		}, 3000);
-	// 	});
-	// 	return false;
-	// });
-
 	$("form").submit(function (e) {
 		e.preventDefault();
 		var th = $(this);
@@ -93,6 +72,10 @@ $(function () {
 
 		var email = th.find('[name=email]').val();
 		var name = th.find('[name="Имя"]').val();
+		var thanksWindow = window.open('thank-you.html', '_blank');
+		var openThanksWindowFunction = function () {
+			thanksWindow.location;
+		}
 
 		var data = {
 			email: email,
@@ -115,7 +98,7 @@ $(function () {
 			$('.form').removeClass('loading');
 			th.trigger("reset");
 			$.magnificPopup.close();
-			window.open("thank-you.html");
+			openThanksWindowFunction();
 		});
 		return false;
 	});
