@@ -24,11 +24,15 @@ $(function () {
 		items: 1,
 		loop: true,
 		smartSpeed: 700,
+		autoHeight: true,
 		dots: true,
 		nav: true,
 		navText: ['<img class="img-responsive" src="../img/arrow-left.png">', '<img class="img-responsive" src="../img/arrow-right.png">'],
 		responsiveClass: true,
 		margin: 50,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: true
 	});
 	/* Owl-carousel */
 
@@ -44,6 +48,7 @@ $(function () {
 		preloader: false,
 		midClick: true,
 		removalDelay: 300,
+		closeOnBgClick: false,
 		mainClass: 'my-mfp-slide-bottom',
 		callbacks: {
 			beforeOpen: function () {
